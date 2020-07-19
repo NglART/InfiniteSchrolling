@@ -2,7 +2,7 @@
 <html<!DOCTYPE html>
 <html>
 <head>
-</title>contentEdit-makecontenteditable</title>
+</title>content edit make content editable</title>
 <script>
 function myFunction() {
   document.getElementById("myP").contentEditable = true;
