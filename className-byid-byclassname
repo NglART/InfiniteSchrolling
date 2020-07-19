@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>give class name by id and class name</title>
+<title>get class name by id and class name</title>
 <style>
 .mystyle {
   width: 300px;
