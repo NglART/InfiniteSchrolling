@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("myP").contentEditable = true;
+  document.getElementById("demo").innerHTML = "The p element above is now editable. Try to change its text.";
+}
+</script>
+</head>
+<body>
+
+<p id="myP">This is a paragraph. Click the button to make me editable.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
