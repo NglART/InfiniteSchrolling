@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>focus blur give focus and remove focus</title>
 <script>
 function getFocus() {
   document.getElementById("myText").focus();
