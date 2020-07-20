@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>onscroll up and down</title>
+<style>
+.test {
+  background-color: yellow;
+}
+</style>
+
+<script>
+var a = 0, b = 0;
+
+window.onscroll = function() {myFunction()};
+
+
+
+function myFunction() {
+
+if (document.documentElement.scrollTop - a > 0) {
+document.getElementById("myP").innerHTML = "down";
+ 
+} else {
+
+document.getElementById("myP").innerHTML = "up";
+ 
+}
+
+a = document.documentElement.scrollTop;
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("myP").className = "test";
+  } else {
+    document.getElementById("myP").className = "";
+  }
+}
+</script>
+
+
+</head>
+<body style="height:1500px">
+
+<p>Scroll down this page</p>
+
+<p id="myP" style="position:fixed">When you have scrolled 50 pixels from the top of this page, add the class "test" (yellow background color) to this paragraph. Scroll up again to remove the class.
+</p>
+
+
+
+</body>
+</html>
