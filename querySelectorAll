@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+  border: 1px solid black;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV">
+  <p class="example">A paragraph with class="example" in div</p>
+  <p class="example">A paragraph with class="example" in div.</p> 
+  <p class="example">A paragraph with class="example" in div.</p>
+</div>
+  
+
+<p>Click the button to add a background color to elements in DIV.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> Not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV").querySelectorAll(".example");
+  x[0].style.backgroundColor = "red";
+  var y = document.getElementById("myDIV").querySelectorAll("p");
+  y[1].style.backgroundColor = "blue";
+  var z = document.getElementById("myDIV").querySelectorAll("p.example"); 
+  z[2].style.backgroundColor = "green";
+}
+</script>
+
+</body>
