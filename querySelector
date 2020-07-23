@@ -5,18 +5,18 @@
 <body>
 
 <div id="myDIV">
-  <p class="example">p1</p>
-  <p class="example">p2</p> 
+  <p class="example" id="myp1">p1</p>
+  <p class="example" id="myp2">p2</p> 
 </div>
 
-<p>Click the button to change the text of the first element with class="example" in div.</p>
+<p>Click the button to see different situations with querySelector</p>
 
 <button onclick="myFunction()">Try it</button>
 
 <script>
 function myFunction() {
   var x = document.getElementById("myDIV");
-  x.querySelector(".example").innerHTML = "Hello World!";
+  document.getElementById("myp2").innerHTML= "by class =" + x.querySelector(".example").innerHTML +"<br>"+"by element =" + x.querySelector("p").innerHTML +"<br>"+"by a class in an element" + x.querySelector("p.example").innerHTML +"<br>"+"by id =" + x.querySelector("#myp1").innerHTML +"<br>"+"by an attribute in an element =" + x.querySelector("p[id]").innerHTML + "<br>"+"by multiple selectors =" + x.querySelector("#myp2, #myp1").innerHTML;
 }
 </script>
 
