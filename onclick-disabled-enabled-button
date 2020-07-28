@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enable a botton when another is clicked and disable current button</p>
+
+<button onclick="myFunction(this)">Try it 1</button>
+
+<button onclick="myFunction(this)">Try it 1</button>
+
+<button onclick="myFunction(this)">Try it 1</button> 
+<script>
+var a = "";
+function myFunction(e) {
+ a.disabled=false;
+ a=e}
+ e.disabled=true;
+}
+</script>
+</body>
+</html>
