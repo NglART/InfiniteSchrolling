@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="https://64.media.tumblr.com/180117ba144470794977738fd0d25ec7/c03a64a6501bb4da-10/s75x75_c1/931ac6641918fceafda31fd682b3f50249ab3d6d.png" onclick="myFunction(this)" />
+
+<p>When click the input field, a function is triggered which changes src.</p>
+
+<script>
+function myFunction(x) {
+  x.src = "https://64.media.tumblr.com/576bfcb84fb5d26db68305ab18f66e42/c03a64a6501bb4da-08/s75x75_c1/54190f33547ebb8b760a1c88a0b630802ad608d0.gif";
+}
+</script>
+
+</body>
+</html>
