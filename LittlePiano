@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #143F6B;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
+  </style>
+  <script>
+const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
+
+const keys = document.querySelectorAll('.key')
+const whiteKeys = document.querySelectorAll('.key.white')
+const blackKeys = document.querySelectorAll('.key.black')
+
+keys.forEach(key => {
+  key.addEventListener('click', () => playNote(key))
+})
+
+document.addEventListener('keydown', e => {
+  if (e.repeat) return
+  const key = e.key
+  const whiteKeyIndex = WHITE_KEYS.indexOf(key)
+  const blackKeyIndex = BLACK_KEYS.indexOf(key)
+
+  if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex])
+  if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
+})
+
+function playNote(key) {
+  const noteAudio = document.getElementById(key.dataset.note)
+  noteAudio.currentTime = 0
+  noteAudio.play()
+  key.classList.add('active')
+  noteAudio.addEventListener('ended', () => {
+    key.classList.remove('active')
+  })
+}
+  </script>
+  <title>Piano</title>
+</head>
+<body>
+  <div class="piano">
+    <div data-note="C" class="key white" onclick="playNote(this)"></div>
+    <div data-note="Db" class="key black" onclick="playNote(this)"></div>
+    <div data-note="D" class="key white" onclick="playNote(this)"></div>
+    <div data-note="Eb" class="key black" onclick="playNote(this)"></div>
+    <div data-note="E" class="key white" onclick="playNote(this)"></div>
+    <div data-note="F" class="key white" onclick="playNote(this)"></div>
+    <div data-note="Gb" class="key black" onclick="playNote(this)"></div>
+    <div data-note="G" class="key white" onclick="playNote(this)"></div>
+    <div data-note="Ab" class="key black" onclick="playNote(this)"></div>
+    <div data-note="A" class="key white" onclick="playNote(this)"></div>
+    <div data-note="Bb" class="key black" onclick="playNote(this)"></div>
+    <div data-note="B" class="key white" onclick="playNote(this)"></div>
+  </div>
+
+  <audio id="C" src="https://a.tumblr.com/tumblr_qe3pfaJ9B91ykiqfuo1.mp3"></audio>
+  <audio id="Db" src="https://a.tumblr.com/tumblr_qe3vyayCUJ1ykiqfuo1.mp3"></audio>
+  <audio id="D" src="https://a.tumblr.com/tumblr_qe558qAjgi1ykiqfuo1.mp3"></audio>
+  <audio id="Eb" src="https://a.tumblr.com/tumblr_qe699m7TOQ1ykiqfuo1.mp3"></audio>
+  <audio id="E" src="https://a.tumblr.com/tumblr_qe69ffUaOd1ykiqfuo1.mp3"></audio>
+  <audio id="F" src="https://a.tumblr.com/tumblr_qe69keNPww1ykiqfuo1.mp3"></audio>
+  <audio id="Gb" src="https://a.tumblr.com/tumblr_qe6af4by2Z1ykiqfuo1.mp3"></audio>
+  <audio id="G" src="https://a.tumblr.com/tumblr_qe6akj9DP31ykiqfuo1.mp3"></audio>
+  <audio id="Ab" src="https://a.tumblr.com/tumblr_qe6apiZFtF1ykiqfuo1.mp3"></audio>
+  <audio id="A" src="https://a.tumblr.com/tumblr_qe6begvmj51ykiqfuo1.mp3"></audio>
+  <audio id="Bb" src="https://a.tumblr.com/tumblr_qe6bokJ5wH1ykiqfuo1.mp3"></audio>
+  <audio id="B" src="https://a.tumblr.com/tumblr_qe6bsxU4w41ykiqfuo1.mp3"></audio>
+</body>
+</html>
