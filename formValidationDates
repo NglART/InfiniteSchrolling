@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function validateForm() {
+  var timeI = document.getElementById("myTimeI").value;
+  var timeF = document.getElementById("myTimeF").value;
+  var dateI = document.getElementById("myDateI").value;
+  var dateF = document.getElementById("myDateF").value
+  
+  var k = new Date(dateI+" "+timeI);
+  var l = new Date(dateF+" "+timeF);
+ 
+  if (k>l) {
+    return false;
+  }
+} 
+</script> 
+</head>
+</body>
+
+<form action="/action_page.php" onsubmit="return validateForm()"  method="POST">          
+Start:
+<input type="time" id="myTimeI" name="horainicio" value=""/>
+<input type="date" id="myDateI" name="fechainicio" value="a" />
+<br>
+End:
+<input type="time" id="myTimeF" />
+<input type="date" id="myDateF" />
+
+<input type="submit" value="save"/>  
+</form>
+
+</body>
+</html>
