@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="image.gif" onerror="myFunction()">
+
+<p id="elemtId">A function is triggered if an error occurs when loading the image. The function hide it.
+In this example we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+<script>
+function myFunction() {
+   document.getElementsByTagName("img")[0].style.display="none";
+}
+</script> 
+
+</body>
+</html>
