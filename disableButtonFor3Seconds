@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to disable it for 3 seconds.</p>
+
+<button onclick="myFunction(this)">Try it</button>
+
+<script>
+function myFunction(e) {
+  e.disabled=true;
+  setTimeout(function(){ e.disabled=false; }, 3000);
+}
+</script>
+
+</body>
+</html>
