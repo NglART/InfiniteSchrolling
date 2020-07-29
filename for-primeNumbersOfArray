@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Select prime numbers of array with for... </p>
+
+<script>
+
+var sum = 0;
+var nums = [1, 5, 2, 9, 3, 4, 11];
+
+for(let i=0; i<nums.length ; i++) { 
+ 
+ if (nums[i]<=1 || nums[i]%1) {
+   continue;
+ }
+ let m=Math.sqrt(nums[i]);
+ let isPrime=true;
+ for (let j=2; j<=m; j++) {
+            if (nums[i]%j==0) {
+                isPrime=false;
+                break;
+            }
+ }
+ if (isPrime) {
+ sum += nums[i];
+ document.getElementById("demo").innerHTML += nums[i] + " "; 
+}
+}
+ document.getElementById("demo").innerHTML += "= "+sum; 
+</script>
+
+</body>
+</html>
