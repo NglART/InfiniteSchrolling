@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Select prime numbers of Array with foreach</p>
+
+<script>
+
+var sum = 0;
+var nums = [1, 5, 2, 9, 3, 4, 11];
+nums.forEach(myFunction);
+
+function myFunction(item) { 
+ if (item<=1 || item%1) {
+  return false;
+ }
+ let m=Math.sqrt(item);
+ for (let i=2; i<=m; i++) {
+            if (item%i==0) {
+                return false;
+            }
+ }
+ sum += item;
+ document.getElementById("demo").innerHTML += item + " "; 
+}
+ document.getElementById("demo").innerHTML += "= "+sum; 
+</script>
+
+</body>
+</html>
