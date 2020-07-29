@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href = "https://www.google.com" target="_blank" onclick="myFunction(this)"><img src="../jpg/koryo.jpg">
+</a>
+<a href = "https://www.google.com" target="_blank" onclick="myFunction(this)"><img src="../jpg/koryo.jpg">
+</a>
+<a href = "https://www.google.com" target="_blank" onclick="myFunction(this)"><img src="../jpg/koryo.jpg">
+</a>
+
+<script>
+var a = "";
+var aHref = "";
+function myFunction(e) {
+ if (a==e) {
+  a.href="javascript: void(0)";
+  a.target="_self";
+} 
+else {
+ a.href=aHref;
+ a.target="_blank";
+ a=e;
+ aHref=e.href;
+}
+
+}
+</script>
+</body>
