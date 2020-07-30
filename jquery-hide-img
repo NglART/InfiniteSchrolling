@@ -1,0 +1,16 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ <div>
+  <img src="https://cdn.pixabay.com/photo/2020/07/24/03/10/cubone-5432815_1280.png" width="300px" />
+ </div>
+ <button class="btn1">Hide me</button>
+<script>
+$(".btn1").click(function(){
+    $("img").hide();
+  });
+</script>
+</body>
+</html>
