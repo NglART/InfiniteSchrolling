@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body onload="myFunction1()" onbeforeunload="return myFunction2()">
+
+<p>Reload this page, without onbeforeunload's alert box.</p>
+    
+<script>
+function myFunction2() {
+  return undefined;
+};
+
+function myFunction1() {
+  alert("Page is loaded");
+}
+</script>
+
+</body>
