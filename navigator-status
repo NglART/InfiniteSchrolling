@@ -1,0 +1,12 @@
+<html>
+<body>
+ <p id="textData"></p>
+ <button onclick="myFunction()">Click me</button>
+<script>
+ function myFunction() {  
+   document.getElementById("textData").innerHTML = "appCodeName : " + navigator.appCodeName + "<br>" + "appName : " + navigator.appName + "<br>" + "appVersion : " + navigator.appVersion + "<br>" + "cookieEnabled : " + navigator.cookieEnabled + "<br>" + "deviceMemory : " + navigator.deviceMemory + " GB of RAM" + "<br>" + "language : " + navigator.language + "<br>" + "maxTouchPoints : " + navigator.maxTouchPoints + "<br>" + "onLine : " + navigator.onLine + "<br>" + "plataform : " + navigator.platform + "<br>" + "product : " + window.navigator.product + "<br>" + "productSub : " + window.navigator.productSub + "<br>" + "vendor : " + window.navigator.vendor + "<br>" + "vendor : " + navigator.webdriver + "<br>" ;
+}
+</script>
+</body>
+
+ 
