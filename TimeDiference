@@ -1,0 +1,26 @@
+<html>
+<body>
+ <input type="datetime-local">
+ <input type="dateTime-local">
+ <p id="wLine"></p>
+ <button onclick="myFunction()">Click me</button>
+<script>
+ function myFunction() {
+  var minutes = 1000 * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var x = new Date(document.getElementsByTagName("input")[0].value);
+  var y = new Date(document.getElementsByTagName("input")[1].value);
+  var z = y.getTime() - x.getTime();
+  var a = Math.round(z/days);
+  var restA = z%days;
+  var b = Math.round(restA/hours);
+  var restB = restA%hours;
+  var c = Math.round(restB/minutes)
+  
+document.getElementById("wLine").innerHTML="Initial Date : "+x+"<br>"+"Final Date  : "+y+"<br>"+a+" days"+"<br>"+b+" hours"+"<br>"+c+" minutes";
+}
+</script>
+</body>
+
+ 
