@@ -1,0 +1,35 @@
+<html>
+<body>
+ <p id="textData"></p>
+ <button onclick="myFunction()">Click me</button>
+<script>
+ function myFunction() {
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || navigator.msConnection;
+    if (connection) {
+        var data = {
+            saveData: connection.saveData,
+            downlink: connection.downlink, //velocidad descarga MB
+            downlinkMax: connection.downlinkMax, //Max download speed MB    type: ((connection.type !== undefined && connection.type !== null) ? connection.type : ""), //connection type ex: wifi, 3g, lte etc.
+            effectiveType: (connection.type !== connection.effectiveType && connection.effectiveType !== null) ? connection.effectiveType : "", 
+            rtt: connection.rtt //time rtt.
+        };
+
+        function updateConnectionStatus() {
+            console.log("switch connection from " + data.type + " to " + connection.effectiveType);
+            data.type = connection.effectiveType;
+        }
+        //Podes agregar un evento para detectar cuando la conexion ha cambiado.
+        connection.addEventListener('change', updateConnectionStatus);
+        document.getElementById("textData").innerHTML="saveData : " + data.saveData + "<br>" + " downlink : " + data.downlink + " MB" + "<br>" + "downlinkMax : " +  connection.downlinkMax + " MB" + "<br>" + "type : " +  connection.type + "<br>" + "efectiveType : " +  connection.efectiveType + "<br>" + "rtt : " +  connection.rtt ;
+        
+    } else {
+
+        alert("Navegador no soporta api NETWORK");
+    }
+
+
+}
+</script>
+</body>
+
+ 
