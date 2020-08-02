@@ -1,0 +1,27 @@
+<html>
+<body>
+ <h1 id="write">0</h1>
+  <button onclick='count()'>Siguiente número</button>
+  <button onclick="localStorage.removeItem('count'); getCount();">Siguiente número</button>
+
+<script>
+    function count() {
+        if (localStorage.getItem("count") === null) {      
+        var count=0;
+        }
+        else{      
+        var count= localStorage.getItem('count');
+        }
+        count++;
+        localStorage.setItem('count', count);
+        getCount();
+      }
+
+function getCount() {
+var count = localStorage.getItem('count');
+        document.getElementById("write").innerHTML = count;
+}
+
+</script>
+</body>
+</html>
