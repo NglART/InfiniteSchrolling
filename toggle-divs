@@ -1,0 +1,93 @@
+<html>
+<head>
+<style>
+#padre{
+        border:solid 1px #2A1212;
+        width: 550px;
+        height: 500px;
+        background-color: #D8E9F4;
+        position: relative;
+}
+#padre div:nth-child(1) {
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+}
+#padre div:nth-child(2) {
+        left: 40px;
+        top: 40px;
+        z-index: 2;
+}
+#padre div:nth-child(3) {
+        left: 60px;
+        top: 60px;
+        z-index: 3;
+}
+#padre div:nth-child(4) {
+        left: 80px;
+        top: 80px;
+        z-index: 4;
+}
+#padre div:nth-child(5) {
+        left: 100px;
+        top: 100px;
+        z-index: 5;
+}
+#padre div:nth-child(6) {
+        left: 120px;
+        top: 120px;
+        z-index: 6;
+}
+.ta{
+        border:double 4px #2D2727;
+        border-radius: 5px;
+        width: 350px;
+        height: 250px;
+        position: absolute;
+}
+#tab1{
+        background-color: #F40C0C;
+}
+#tab2{
+        background-color: #EC0CF4;
+}
+#tab3{
+        background-color: #2D0CF4;
+}
+#tab4{
+        background-color: #0CF1F4;
+}
+#tab5{
+        background-color: #0CF43D;
+}
+#tab6{
+        background-color: #F1F40C;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="padre">
+        <div id="tab1" class="ta">1</div>
+        <div id="tab2" class="ta">2</div>
+        <div id="tab3" class="ta">3</div>
+        <div id="tab4" class="ta">4</div>
+        <div id="tab5" class="ta">5</div>
+        <div id="tab6" class="ta">6</div>
+</div>
+<script>
+$(document).ready(function() {
+    $(".ta").click(function () {
+        // current position (0 to 5)
+        let index = $(this).index();
+        // isn't the front element
+        if(index < 5) {
+            // move the 6th element to the current position
+$(".ta").eq(5).insertBefore($(this));
+            // show the element in the front
+            $("#padre").append($(this));
+        }
+    });
+});
+</script>
+</body>
