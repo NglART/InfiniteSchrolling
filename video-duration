@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<video id="video" width="320" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type='video/mp4'>
+  Asd
+  </video>
+<p>
+<button onclick="myFunction()">Get video duration</button>
+
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("video").duration;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
