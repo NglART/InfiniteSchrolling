@@ -1,0 +1,72 @@
+<html>
+<head>
+ <script> 
+  var h, m, s;
+  var runT;
+  window.onload = function() {
+   clearInterval(runT);
+   if (localStorage.getItem("sT") === null) {      
+        var s=0;
+        }
+        else{      
+        var s= localStorage.getItem('sT');
+        }
+   if (localStorage.getItem("mT") === null) {      
+        var m=0;
+        }
+        else{      
+        var m= localStorage.getItem('mT');
+        }
+   if (localStorage.getItem("hT") === null) {      
+        var h=0;
+        }
+        else{      
+        var h= localStorage.getItem('hT');
+        }
+   writeT();
+   document.getElementsByTagName("input")[1].value="Reset";
+  } 
+  function startT() {
+   document.getElementsByTagName("input")[0].setAttribute("onclick", "pauseT()");
+   runT = setInterval(countT, 1000);   
+  }
+  function countT() {
+  s++;
+  writeT();
+  }
+  function pauseT() {
+   clearInterval(runT);
+   document.getElementsByTagName("input")[0].setAttribute("onclick", "startT()");
+   localStorage.removeItem("sT");
+   localStorage.removeItem("mT");
+   localStorage.removeItem("hT");
+  }
+  function resetT() {
+   clearInterval(runT);
+   document.getElementsByTagName("input")[0].setAttribute("onclick", "startT()");
+   localStorage.removeItem("sT");
+   localStorage.removeItem("mT");
+   localStorage.removeItem("hT");
+   document.getElementsByTagName("input")[0].value="00:00:00";
+   s=0;m=0;h=0;
+  }
+  function writeT() {
+   var hAux, mAux, sAux;
+  if (s>59){m++;s=0;}
+  if (m>59){h++;m=0;}
+  if (h>24){h=0;}
+  if (s<10){sAux="0"+s;}else{sAux=s;}
+  if (m<10){mAux="0"+m;}else{mAux=m;}
+  if (h<10){hAux="0"+h;}else{hAux=h;}
+  document.getElementsByTagName("input")[0].value = hAux + ":" + mAux + ":" + sAux; 
+  localStorage.setItem('sT', s);
+  localStorage.setItem('mT', m);
+  localStorage.setItem('hT', h);
+  }
+ </script>
+</head>
+<body>
+ <input type="button" onclick="startT()" >
+ <input type="button" onclick="resetT()" >
+</body>
+</html>
