@@ -6,25 +6,27 @@
   window.onload = function() {
    clearInterval(runT);
    if (localStorage.getItem("sT") === null) {      
-        var s=0;
+        s=0;
         }
         else{      
-        var s= localStorage.getItem('sT');
+        s= localStorage.getItem("sT");
+        
         }
    if (localStorage.getItem("mT") === null) {      
-        var m=0;
+        m=0;
         }
         else{      
-        var m= localStorage.getItem('mT');
+        m= localStorage.getItem('mT');
         }
    if (localStorage.getItem("hT") === null) {      
-        var h=0;
+        h=0;
         }
         else{      
-        var h= localStorage.getItem('hT');
+        h= localStorage.getItem('hT');
         }
    writeT();
    document.getElementsByTagName("input")[1].value="Reset";
+   
   } 
   function startT() {
    document.getElementsByTagName("input")[0].setAttribute("onclick", "pauseT()");
