@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">Try it</button>
+
+<p>random sort of two array</p>
+
+<script>
+
+function myFunction() {
+    var colorS = ["Verde", "Rojo"];
+    var numberS = [2, 3, 4, 5, "Rey"];
+    var masoC = allPairs();
+    sortMaso(masoC);
+    alert(masoC);
+
+    function allPairs() {
+        var maso = [];
+        colorS.forEach(function (a) {
+            numberS.forEach(function (b) {
+                maso.push(a+b);
+            });
+        });
+
+        return maso;
+    }
+
+    function sortMaso(maso) {
+        maso.sort(function (x, z) {
+            return 0.5 - Math.random();
+        });
+    }
+
+</script>
+
+</body>
+</html>
