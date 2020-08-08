@@ -1,0 +1,24 @@
+<style>
+div {
+ background: red;
+ display: inline-block;
+}
+</style>
+<div>
+<li><img class="image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqsw6o-e7a27e84-db8f-46a9-9045-bc9c0d70390a.png/v1/fill/w_200,h_200,strp/hii_chan__hanamaru_youchien_by_nglbits_ddqsw6o-200h.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0yMDAwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFzdzZvLWU3YTI3ZTg0LWRiOGYtNDZhOS05MDQ1LWJjOWMwZDcwMzkwYS5wbmciLCJ3aWR0aCI6Ijw9MjAwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.DfsOVMA2B62kFjKFEbnRkgii3hcGJXfbwNAXH8vwfEE" width="10%"></li>
+<li><img class="image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqo4t3-7959aceb-7412-47b3-8d9b-140b2e9a2153.png/v1/fill/w_200,h_200,strp/kuma_hii_chan__hanamaru_youchien_by_nglbits_ddqo4t3-200h.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0yMDAwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFvNHQzLTc5NTlhY2ViLTc0MTItNDdiMy04ZDliLTE0MGIyZTlhMjE1My5wbmciLCJ3aWR0aCI6Ijw9MjAwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.t_SN0Z97iKIZLro_XEDZfIT5lK7sDJi7YHdAjbokAOs" width="10%"></li>
+<li><img class="image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqqlup-13cfc600-40f4-4bb7-8133-69c81e610159.png/v1/fill/w_200,h_200,strp/hii_chan__hanamaru_youchien_by_nglbits_ddqqlup-200h.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0yMDAwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFxbHVwLTEzY2ZjNjAwLTQwZjQtNGJiNy04MTMzLTY5YzgxZTYxMDE1OS5wbmciLCJ3aWR0aCI6Ijw9MjAwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8L8AdzrKbhmpWzU8kISOEehTVDGqCilrSHZ40MlqAZU" width="10%"></li>
+<li><img class="image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqbkhp-8d10ec0c-f90d-4443-ba21-f2f6808f2428.png/v1/fill/w_200,h_200,strp/hii_chan__hanamaru_youchien_by_nglbits_ddqbkhp-200h.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNTAwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFia2hwLThkMTBlYzBjLWY5MGQtNDQ0My1iYTIxLWYyZjY4MDhmMjQyOC5wbmciLCJ3aWR0aCI6Ijw9MTUwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HyKMGB_6AvBWPEMXBZXNg6YaCnM6sQXe4ldl87-d2qY" width="10%"></li>
+</div>
+<div>
+<h2>you clicked this</h2>
+<img src="" id="resultado" width="100%">
+</div>
+<script>
+    document.addEventListener('click', function (event) {
+        if (!event.target.matches('.image')) return;
+        event.preventDefault();
+        
+document.getElementById('resultado').src = event.target.src;
+    }, false);
+</script>
