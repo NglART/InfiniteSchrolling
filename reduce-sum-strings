@@ -1,0 +1,26 @@
+<html>
+<body>
+ <p><p>
+ <p><p>
+ <p><p>
+ <p><p>
+ <p><p>
+<script>
+window.onload = function() {
+let numbers = ["101", "3"];
+let total1 = numbers.reduce((a, b) => ~~a + ~~b, 0);
+let total2 = numbers.reduce((a, b) => (a | 0) + (b | 0));
+let total3 = numbers.reduce((a, b) => Number(a) + Number(b), 0);
+let total4 = numbers.reduce((a, b) => parseFloat(a) + parseFloat(b));
+let total5 = numbers.reduce((a, b) => a + + b, 0);
+    
+ ptxt=document.getElementsByTagName("p");
+ ptxt[0].innerHTML=total1;
+ ptxt[1].innerHTML=total2;
+ ptxt[2].innerHTML=total3;
+ ptxt[3].innerHTML=total4;
+ ptxt[4].innerHTML=total5;
+}
+</script>
+</body>
+<html>
