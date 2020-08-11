@@ -1,0 +1,39 @@
+
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+ <label for="file-upload" class="custom-file-upload">
+                                                
+ <img style="width:225px" src="~/images/Recursos/image5.png" />
+                                       
+ </label>
+                                        
+@*<button id="uploadBtn" style="background-image:url(../images/Recursos/image5.png)"></button>*@
+                                        
+<input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+                                
+<script>
+
+jQuery(document).ready(function () {
+$('#file-upload').on('change', 
+function(){
+  var ext = $(this).val().split('.').pop();
+  if ($(this).val() != '') {
+    if(ext == "pdf"){
+      alert("La extensión es: " + ext);
+    }
+    else
+    {
+      $( this ).val('');
+      alert("Extensión no permitida: " + ext);
+    }
+  }
+});
+});
+</script>
+
+</body>
+</html>
