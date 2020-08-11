@@ -1,0 +1,44 @@
+<h1>form validation alphanumeric number</>
+<form action="plusUltra" method="post" id="formulario">
+  <select name="numericAlphanumeric" id="mySelect">
+    <option value="alphanumeric">Alphanumeric</option>
+    <option value="numeric">Numeric</option>
+  </select>
+  <input type="text" name="data" id="myInput">
+  <input type="submit" value="enviar" id="mySubmit">
+</form>
+
+<script>
+ var VmySelect = document.getElementById("mySelect");
+ var VmyInput = document.getElementById("myInput")
+ var VmySubmit = document.getElementById("mySubmit");
+ VmySelect.onchange = function () {
+  
+  switch(VmySelect.value) {
+
+   case "numeric":
+    VmyInput.type = "number";
+    VmyInput.min = 10;
+    VmyInput.max = 100;
+    VmyInput.required = true;
+    break;
+
+   case "alphanumeric":
+    VmyInput.type = "text";
+    break;
+  } 
+ }
+
+ VmySubmit.onclick = function () {
+  switch(VmySelect.value) {
+   case "alphanumeric":
+    var letters = /^[0-9a-zA-Z]+$/;
+    if(VmyInput.value.match(letters)) {
+     return true;
+    } else {
+     return false;
+    } 
+     break;
+  }
+ }
+</script>
