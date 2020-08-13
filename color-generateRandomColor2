@@ -18,7 +18,7 @@
   random_color = "#";
 
   for (i=0;i<6;i++){
-   random_color += hexadecimal[Math.floor(Math.random() * hexadecimal.length)];
+   random_color += hexdec[Math.floor(Math.random() * hexdec.length)];
   }
  
  var node = document.createElement("p"); 
