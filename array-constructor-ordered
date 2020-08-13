@@ -1,0 +1,51 @@
+<p></p>
+<script>
+window.onload = function () {
+
+class cars {
+ constructor(marca,modelo,puertas,cilindrada, precio){
+  this.marca = marca;
+  this.modelo = modelo;
+  this.puertas = puertas;
+  this.cilindrada = cilindrada;
+  this.precio = precio;
+ }          
+}
+        
+let car1 = new cars();
+ car1.marca = "Peugeot";
+ car1.modelo = "206";
+ car1.puertas = 4;
+ car1.precio = 200000;
+
+let car2 = new cars();
+ car2.marca = "Honda";
+ car2.modelo = "Titan";
+ car2.cilindrada = "125c";
+ car2.precio = 60000;
+
+let car3 = new cars();
+ car3.marca = "Peugeot";
+ car3.modelo = "208";
+ car3.puertas = 5;
+ car3.precio = 250000;
+
+let car4 = new cars();
+ car4.marca = "Yamaha";
+ car4.modelo = "YBR";
+ car4.cilindrada = "160c";
+ car4.precio = 80500.50;
+
+var cars2 = [car1,car2,car3,car4];
+        
+let hl = cars2.sort(function(a,b){
+ return (a.precio < b.precio ? 1 : (a.precio > b.precio ? -1 : 0 ));
+})
+          
+console.log(hl);
+
+for (let i=0;i<hl.length;i++) {
+ document.getElementsByTagName("p")[0].innerHTML += hl[i].marca + "<br>" + "-" + hl[i].modelo + "<br>" + "-" + hl[i].puertas + "<br>" + "-" + hl[i].cilindrada +  "<br>" + "-" + hl[i].precio +   "<br>";
+}
+}
+</script>
