@@ -1,0 +1,33 @@
+<button>push me</button>
+<script>
+document.getElementsByTagName("button")[0].onclick = function () {
+var myArray = [
+    { activitt: 'Work', value: 9 },
+    { activity: 'Eat', value: 1 },
+    { activity: 'Commute', value: 2 },
+    { activity: 'Play Game', value: 1 },
+    { activity: 'Sleep', value: 7 }
+];
+
+console.log(myArray);
+console.log(myArray.length);
+
+var newArray0 = [];
+var reg = { activity: '', value: 0 };
+
+for (var i = 0;i < myArray.length; i++) {
+    reg.activity = myArray[i].activity;
+    reg.value = myArray[i].value;
+    console.log(reg);
+    
+newArray0.push(JSON.parse(JSON.stringify(reg)));
+}
+
+console.log(newArray0);
+console.log(newArray0.length);
+
+var newArray1 = myArray.slice();
+var newArray2 = [].concat(myArray);
+var newArray3 = [...myArray];
+}
+</script>
