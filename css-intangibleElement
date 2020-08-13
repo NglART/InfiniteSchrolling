@@ -1,0 +1,35 @@
+
+<style>
+.red, .blue {
+    color: black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.red {
+    background-color: rgba(255,0,0,0.7);
+    left: 100px;
+    top: 100px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blue {
+    background-color: blue;
+    left: 150px;
+    top: 150px;
+    cursor: pointer;
+}
+
+.blue:hover {
+  opacity: 0.5;
+}
+
+</style>
+<div class="red">Rojo</div>
+<div class="blue">Azul</div>
