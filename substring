@@ -1,0 +1,12 @@
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "#FFFFFF";
+  var res = str.substring(1, 7);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
