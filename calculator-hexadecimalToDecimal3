@@ -1,0 +1,13 @@
+<input type="text"><input type"text">
+
+<script>
+
+document.getElementsByTagName("input")[0].onkeyup = function() {
+  document.getElementsByTagName("input")[1].value = parseInt(this.value, 16);
+};
+
+document.getElementsByTagName("input")[1].onkeyup = function() {
+  document.getElementsByTagName("input")[0].value = Number(this.value).toString(16).toUpperCase();
+};
+
+</script>
