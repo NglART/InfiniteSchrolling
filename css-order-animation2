@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#main {
+  margin: 0px;
+  width: 140px;
+  height: 140px;
+  border: 1px transparent #000000;
+  display: flex;
+  flex-flow: wrap;
+}
+
+#main div {
+  width: 70px;
+  height: 70px; 
+}
+
+@keyframes mymove {
+  50% {order: 6;}
+}
+</style>
+
+</head>
+<body>
+
+<div id="main">
+  <div style="background-color:lightgreen;order:1;" id="myGreenDIV"></div>
+  <div style="background-color:coral;order:2;"></div>
+  <div style="background-color:lightblue;order:3;"></div>
+  <div style="background-color:pink;order:4;"></div>
+</div>
+
+<button onclick="myFunction2()">Play</button>
+<button onclick="myFunction()">Stop</button>
+
+<script>
+ function myFunction() {
+  document.getElementById("myGreenDIV").style.animation = "none";
+ }
+ 
+ function myFunction2() {
+  document.getElementById("myGreenDIV").style.animation = "mymove 2s infinite";
+ }
+</script>
+</body>
+</html>
