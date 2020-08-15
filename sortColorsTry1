@@ -1,0 +1,50 @@
+<style>
+ div {
+  width: 800px; 
+ }
+ p {
+  display: inline-block;
+  margin: 0px;
+ }
+</style>
+
+<button>Generate random color</button>
+<input type="number" min="1"><br>
+<div id = "myList"></div>
+<div id = "myList2"></div>
+<script>
+ hexdec = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
+ var arrC = [];
+
+ document.getElementsByTagName("button")[0].onclick = function () {
+  for (j=0 ; j<document.getElementsByTagName("input")[0].value ; j++) {
+   let random_color = "#";
+
+   for (i=0;i<6;i++){
+    random_color += hexdec[Math.floor(Math.random() * hexdec.length)];
+   }
+ 
+   let node = document.createElement("p"); 
+   node.style.background = random_color;               
+   let textnode = 
+   document.createTextNode(random_color);         
+   node.appendChild(textnode); 
+   arrC.push(parseInt((random_color.substr(1,7)),16));          
+   document.getElementById("myList").appendChild(node); 
+  }
+  arrC = arrC.sort((a, b) => a - b );
+  for (let i=0 ; i<arrC.length ; i++) {
+   let random_color = arrC[i].toString(16).toUpperCase();
+   for (let k=random_color.length ; k<6 ; k++) {
+    random_color = "0" + random_color;
+   }
+   random_color = "#" + random_color;
+   let node = document.createElement("p");
+   node.style.background = random_color;
+   let textnode = 
+   document.createTextNode(random_color);         
+   node.appendChild(textnode);           
+   document.getElementById("myList2").appendChild(node); 
+  }
+ }
+</script>
