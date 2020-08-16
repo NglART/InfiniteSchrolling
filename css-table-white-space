@@ -1,0 +1,19 @@
+<style>
+.myTable td, .myTable th {
+  white-space: nowrap;
+  border: 2px solid black;
+}
+</style>
+
+<table class="myTable">
+ <tr>
+  <td>A</td>
+  <td>AB</td>
+  <td>ABC</td>
+ </tr>
+ <tr>
+  <td>AB</td>
+  <td>ABC</td>
+  <td>AB</td>
+ </tr>
+</table>
