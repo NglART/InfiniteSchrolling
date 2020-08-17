@@ -1,0 +1,3 @@
+# testing
+
+Little examples about how to works some functions, algorithms ...
