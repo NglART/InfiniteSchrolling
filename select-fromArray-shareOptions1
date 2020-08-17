@@ -1,0 +1,44 @@
+<select id="mySelect">
+ <option>Select</option>
+</select>
+<p></p>
+
+<script>
+ var opt = ["opt1", "opt2", "opt3"];
+ var optS = [];
+ var optaux = 0;
+ var sel = document.querySelector("#mySelect");
+ sel.onclick = function() {
+  if (sel.length == 1) {
+   for (let i=0 ; i<opt.length ; i++) {
+    var node = document.createElement("option");                 
+    var textnode = document.createTextNode(opt[i]);         
+node.appendChild(textnode);
+    sel.appendChild(node);  
+   }
+  } else {   
+    optaux = sel.selectedIndex;  
+  }
+ }
+
+document.querySelector("#mySelect");
+ sel.onchange = function() {
+ let selI = sel.selectedIndex;
+ if (optaux != 0) {
+  if (selI == 0) {
+   optS.splice(optS.indexOf(5), 1);
+  } else {
+   optS[optS.indexOf(optaux)] = selI;
+  }
+ } else {
+  optS.push(sel.selectedIndex);
+ }
+ writeS();
+}
+
+function writeS() {
+ let ptxt = document.querySelector("p")
+ ptxt.innerHTML = "Options selected:" + "<br>" + "Index: " + optS[0] + "<br>" + "Length: " + optS.length;
+}
+
+</script>
