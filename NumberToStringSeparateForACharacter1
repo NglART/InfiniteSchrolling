@@ -1,0 +1,17 @@
+<input type="number" id="myNum">
+<input type="button" id="myBtn" value="Number to string" >
+<p></p>
+
+<script>
+ 
+ document.querySelector("#myBtn").onclick = function () {
+  let numI = document.querySelector("#myNum").value;
+  let exp = /(\d)(?=(\d{3})+(?!\d))/g;
+  let rep = '$1,';
+  let arr = numI.toString().split('.');
+  arr[0] = arr[0].replace(exp,rep);
+  let numO = arr[1] ? arr.join('.'): arr[0];
+  document.querySelector("p").innerHTML = numO;
+ }
+ 
+</script>
