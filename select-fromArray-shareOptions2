@@ -1,0 +1,75 @@
+<select id="mySelect">
+ <option>Select</option>
+</select>
+<select id="mySelect2">
+ <option>Select</option>
+</select>
+<select id="mySelect3">
+ <option>Select</option>
+</select>
+<p></p>
+
+<script>
+ var opt = ["opt1", "opt2", "opt3"];
+ var optS = [];
+ var optaux = 0;
+ var sel = document.querySelector("#mySelect");
+
+ var allSel = document.querySelectorAll("select");
+
+ 
+
+ allSel.forEach((e) => {
+
+  e.addEventListener("click",function() { 
+   if (this.length == 1) {
+    for (let i=0 ; i<opt.length ; i++) {
+     var node = document.createElement("option");               
+     var textnode = document.createTextNode(opt[i]);         
+node.appendChild(textnode);
+     this.appendChild(node); 
+     optaux = 0; 
+    }
+   } else {
+    optaux = this.selectedIndex;  
+   }
+   if (optS.length != 0) {
+    for (let j=1 ; j<this.length ; j++) {
+     if (this.selectedIndex == j) {
+      this[j].disabled=false;
+     } else {
+      this[j].disabled=false;
+      for (let k=0 ; k<optS.length ; k++){
+       if (optS[k] == j) {
+        this[j].disabled=true;
+        break;
+       }
+      }
+     }
+    }
+   }
+  });
+
+  e.addEventListener("change",function() {
+   let selI = this.selectedIndex;
+   if (optaux != 0) {
+    if (selI == 0) {
+     optS.splice(optS.indexOf(optaux), 1);
+    } else {
+     optS[optS.indexOf(optaux)] = selI;
+    }
+   } else {
+    optS.push(this.selectedIndex);
+   }
+   writeS();
+  });
+
+ });
+
+
+function writeS() {
+ let ptxt = document.querySelector("p")
+ ptxt.innerHTML = "Options selected:" + "<br>" + optS[0] + "<br>" + optS[1] + "<br>" + optS[2] + "<br>" + "Length: " + optS.length +"<br>" + optaux;
+}
+
+</script>
