@@ -1,0 +1,50 @@
+
+<label for="myR" id="numR"></label>
+<input id="myR" type="range" min="0" max="255">
+<label for="myG" id="numG"></label>
+<input id="myG" type="range" min="0" max="255">
+<label for="myB" id="numB"></label>
+<input id="myB" type="range" min="0" max="255">
+
+<p></p>
+
+<input type="color" id="myColor">
+
+<script>
+
+ myFunction();
+
+ var allInput = document.querySelectorAll("input");
+
+ allInput.forEach((e) => {
+  e.addEventListener("touchmove",myFunction);
+ });
+
+ allInput.forEach((e) => {
+  e.addEventListener("change",myFunction);
+ });
+
+ function myFunction() {
+  
+  document.querySelector("p").innerHTML = "#";
+   rgbToHex(document.querySelector("#myR").value);
+   rgbToHex(document.querySelector("#myG").value);
+   rgbToHex(document.querySelector("#myB").value);
+
+   document.querySelector("#numR").innerHTML = document.querySelector("#myR").value;
+   document.querySelector("#numG").innerHTML = document.querySelector("#myG").value;
+   document.querySelector("#numB").innerHTML = document.querySelector("#myB").value;
+
+   document.querySelector("#myColor").value = document.querySelector("p").innerHTML;
+  
+ }
+
+function rgbToHex(rgb) {
+ let hex = Number(rgb).toString(16).toUpperCase();
+ if (hex.length < 2) {
+  hex = "0" + hex;
+ }
+ document.querySelector("p").innerHTML += hex;
+}
+
+</script>
