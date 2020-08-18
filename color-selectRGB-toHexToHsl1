@@ -1,0 +1,76 @@
+<label for="myR" id="numR"></label>
+<input id="myR" type="range" min="0" max="255">
+<label for="myG" id="numG"></label>
+<input id="myG" type="range" min="0" max="255">
+<label for="myB" id="numB"></label>
+<input id="myB" type="range" min="0" max="255">
+
+<p id="myP1"></p>
+<p id="myP2"></p>
+
+<input type="color" id="myColor">
+
+<script>
+
+ myFunction();
+
+ var allInput = document.querySelectorAll("input");
+
+ allInput.forEach((e) => {
+  e.addEventListener("touchmove",myFunction);
+ });
+
+ allInput.forEach((e) => {
+  e.addEventListener("change",myFunction);
+ });
+
+ function myFunction() {
+
+  document.querySelector("#myP1").innerHTML = "#";
+  let valueR = document.querySelector("#myR").value;
+  let valueG = document.querySelector("#myG").value;
+  let valueB = document.querySelector("#myB").value;
+
+   rgbToHex(valueR);
+   rgbToHex(valueG);
+   rgbToHex(valueB);
+
+   document.querySelector("#numR").innerHTML = valueR;
+   document.querySelector("#numG").innerHTML = valueG;
+   document.querySelector("#numB").innerHTML = valueB;
+   document.querySelector("#myColor").value = document.querySelector("#myP1").innerHTML;
+
+ rgbToHsl([valueR,valueG,valueB]);
+ 
+ }
+
+function rgbToHex(rgb) {
+ let hex = Number(rgb).toString(16).toUpperCase();
+ if (hex.length < 2) {
+  hex = "0" + hex;
+ }
+ document.querySelector("#myP1").innerHTML += hex;
+}
+
+function rgbToHsl(c) {
+  var r = c[0]/255, g = c[1]/255, b = c[2]/255;
+  var max = Math.max(r, g, b), min = Math.min(r, g, b);
+  var h, s, l = (max + min) / 2;
+
+  if(max == min) {
+    h = s = 0; // achromatic
+  } else {
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch(max){
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  document.querySelector("#myP2").innerHTML = "h : " + h*360 + "<br>s : " + s*100 + "<br>l : " + l*100;
+  return new Array(h * 360, s * 100, l * 100);
+}
+
+</script>
