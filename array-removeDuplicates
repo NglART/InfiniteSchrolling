@@ -1,0 +1,73 @@
+<p></p>
+
+<script>
+
+var data=[
+  { id:3, name:"Bet" },
+  { id:1, name:"Ana" },
+  { id:2, name:"Dan" },
+  { id:3, name:"Bet" },
+  { id:2, name:"Dan" },
+  { id:2, name:"Ext" },
+  { id:4, name:"Pem" }
+]
+
+var repetidos=[];
+
+var unicos=data.filter(function(item){
+   var content=JSON.stringify(item);
+   if (repetidos.indexOf(content)>=0){
+        return false;
+   }
+   repetidos.push(JSON.stringify(item));
+   return true;
+});
+
+var repetidos1=[];
+
+var unicos1=data.filter(function(item){
+   var content1=JSON.stringify(item["id"]);
+   if (repetidos1.indexOf(content1)>=0){
+        return false;
+   }
+   repetidos1.push(JSON.stringify(item["id"]));
+   return true;
+});
+
+var repetidos2=[];
+
+var unicos2=data.filter(function(item){
+   var content2=JSON.stringify(item["name"]);
+   if (repetidos2.indexOf(content2)>=0){
+        return false;
+   }
+   repetidos2.push(JSON.stringify(item["name"]));
+   return true;
+});
+
+
+document.querySelector("p").innerHTML += "Array: <br>";
+
+for (let i=0 ; i<data.length ; i++) {
+ document.querySelector("p").innerHTML += "Id : " + data[i].id + " Name : " + data[i].name + "<br>";
+}
+
+document.querySelector("p").innerHTML += "Array unique for 2 properties: <br>";
+
+for (let i=0 ; i<unicos.length ; i++) {
+ document.querySelector("p").innerHTML += "Id : " + unicos[i].id + " Name : " + unicos[i].name + "<br>";
+}
+
+document.querySelector("p").innerHTML += "Array unique by id: <br>";
+
+for (let i=0 ; i<unicos1.length ; i++) {
+ document.querySelector("p").innerHTML += "Id : " + unicos1[i].id + " Name : " + unicos1[i].name + "<br>";
+}
+
+document.querySelector("p").innerHTML += "Array unique by name: <br>";
+
+for (let i=0 ; i<unicos2.length ; i++) {
+ document.querySelector("p").innerHTML += "Id : " + unicos2[i].id + " Name : " + unicos2[i].name + "<br>";
+}
+
+</script>
