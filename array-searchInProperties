@@ -1,0 +1,43 @@
+<p id="arrList"><p>
+
+<input type="text" placeholder="Search for">
+
+<p id="result"></p>
+
+<script>
+
+var lisT = {
+  list1: [
+   ["H11", 1, 1.5, 2, 2.5, 3],
+   ["H12", 3.5, 4, 4.5, 5, 5.5]
+  ],
+  list2: [
+   ["H21", 6, 6.5, 7, 7.5, 8],
+   ["H22", 8.5, 9, 9.5, 10, 10.5],
+   ["H23", 11, 11.5, 12, 12.5, 13],
+   ["H24", 13.5, 14, 14.5, 15, 15.5] 
+  ]
+ }
+
+for(const property in lisT){
+ var arraysInternos = lisT[property];
+ for(const element of arraysInternos){
+  document.querySelector("#arrList").innerHTML += element[0] + " : " + element + "<br>";
+ }
+}
+
+document.querySelector("input").onkeyup = function() {
+ var nemo = this.value;
+ document.querySelector("#result").innerHTML = "";
+
+ for(const property in opt){
+    var arrIn = opt[property];
+    for(const element of arrIn){
+        if(element[0] == nemo) {
+            document.querySelector("#result").innerHTML = element.slice(1);
+        }
+    }
+ }
+}
+ 
+</script>
