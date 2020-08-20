@@ -1,0 +1,21 @@
+<input type="text">
+
+<div></div>
+
+<script>
+
+document.querySelector("input").onkeyup = function() {
+ strong();
+}
+
+function strong() {
+ document.querySelector("div").innerHTML = document.querySelector("input").value; 
+    var element = document.querySelector("div");
+    var value = element.textContent || "";
+    var regex = /\*([a-zA-Z\d\w\s]+)\*/gi;
+    value = value.replace(regex, "<strong>$1</strong>");
+    value = value.replace(/\\r\\n/g, "<br/>");
+    document.querySelector("div").innerHTML = value; 
+}
+
+</script>
