@@ -1,0 +1,15 @@
+<textarea></textarea>
+<button>Push</button>
+<p></p>
+<script>
+ document.querySelector("button").onclick = function() {
+  let txt = document.querySelector("textarea").value;
+  txt = txt.replace(/\n\r?/g, 'nextLine');
+  arrTxt = txt.split('nextLine');
+  let newTxt = "";
+  for(i in arrTxt) {
+   newTxt += "&nbsp&nbsp&nbsp&nbsp"+ arrTxt[i] + "<br>"; 
+  }
+  document.querySelector("p").innerHTML = newTxt;
+ }
+</script>
