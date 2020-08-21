@@ -1,0 +1,28 @@
+<style>
+textarea {
+ width: 100%;
+}
+</style>
+
+<textarea></textarea>
+<button>Push</button>
+<div id="myDiv"></div>
+
+<script>
+ 
+var txt = document.querySelector("textarea");
+var btn = document.querySelector("button");
+btn.onclick = function() {
+ document.querySelector("#myDiv").innerHTML="";
+ var txtValue = txt.value.split(/\n\r?/g);
+ for(i in txtValue) {
+  let space = document.createElement("span");
+  space.innerHTML = "&nbsp&nbsp&nbsp&nbsp";  
+  document.querySelector("#myDiv").appendChild(space);
+  var node = document.createTextNode(txtValue[i]);
+  document.querySelector("#myDiv").appendChild(node);
+  let lineBreak = document.createElement("br");
+  document.querySelector("#myDiv").appendChild(lineBreak);  
+ }
+}
+</script>
