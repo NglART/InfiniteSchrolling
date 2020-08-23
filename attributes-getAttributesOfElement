@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="myButton" onclick="myFunction()">get attributes</button>
+
+<p></p>
+
+<script>
+function myFunction() {
+ var x = document.querySelector("button").attributes;
+ document.querySelector("p").innerHTML = "attributes <br>length: " + x.length + "<br><br>";
+ for (let i=0 ; i<x.length ; i++) {
+  document.querySelector("p").innerHTML += x[i].name + ": " + x[i].value + "<br>";
+ }
+}
+</script>
+</body>
+</html>
