@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*:focus, *:active {
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<a id="myURL" href="https://www.github.com">Visit github.com</a>
+
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+
+<input type="button" onclick="getfocus()" value="Get focus">
+<input type="button" onclick="losefocus()" value="Lose focus">
+
+<script>
+function getfocus() {
+  document.querySelector("a").focus();
+}
+
+function losefocus() {
+  document.getElementById("myAnchor").blur();
+}
+</script>
+
+</body>
+</html>
