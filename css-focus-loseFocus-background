@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+input:focus {
+  background-color: #FBF8EC;
+}
+input:not(:focus) {
+  background-color: #F1F1F1;
+}
+
+</style>
+</head>
+<body>
+<input type="text" >
+<input type="text" >
+</body>
