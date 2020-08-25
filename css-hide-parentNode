@@ -1,0 +1,21 @@
+<style>
+ div {
+  background-color: red;
+  color: #FFFFFF;
+  width: 100
+ }
+ span {
+  float: right;
+ }
+</style>
+
+<div>
+ <span>&times;</span>
+ <p>Click x to hide this</p>
+</div>
+
+<script>
+ document.querySelector("span").onclick = function() {
+  this.parentNode.style.display = "none";
+ }
+</script>
