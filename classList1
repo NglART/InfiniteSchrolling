@@ -1,0 +1,53 @@
+<style>
+ .myStyle1 {
+  color: white;
+ }
+ .myStyle2 {
+  background: black;
+ }
+ .myStyle3 {
+  margin: 50px;
+ }
+</style>
+
+<div class="myStyle1 myStyle2">div element</div>
+<button>Toggle</button>
+<p></p>
+
+<script>
+
+ out = document.querySelector("p");
+ eDiv = document.querySelector("div");
+
+ out.innerHTML = "classList : " + eDiv.classList + "<br>";
+
+ for(let i=0 ; i<eDiv.classList.length ; i++) {
+  out.innerHTML += "&nbsp" + arrClassList[i] + "<br>";
+ }
+  
+ eDiv.classList.add("myStyle3");
+ 
+ out.innerHTML += "new after add classList : " + eDiv.classList + "<br>";
+
+ var arrClassList = eDiv.classList.toString().split(" ");
+ for(let i in arrClassList) {
+  out.innerHTML += "&nbsp" + arrClassList[i] + "<br>";
+ }
+
+ out.innerHTML += "class contains myStyle0? " + eDiv.classList.contains("myStyle0") + "<br>";
+
+ out.innerHTML += "class contains myStyle1? " + eDiv.classList.contains("myStyle1") + "<br>";
+
+ eDiv.classList.remove("myStyle1", "myStyle2");
+ 
+ out.innerHTML += "new after remove classList : " + eDiv.classList + "<br>";
+
+ var arrClassList = eDiv.classList.toString().split(" ");
+ for(let i in arrClassList) {
+  out.innerHTML += "&nbsp" + arrClassList[i] + "<br>";
+ }
+
+ document.querySelector("button").onclick = function() {
+  eDiv.classList.toggle("myStyle2");
+ }
+</script>
