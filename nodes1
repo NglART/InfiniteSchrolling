@@ -33,4 +33,9 @@
 
  out.innerHTML += "previousSibling : " + inp.lastChild.previousSibling.nodeName + "<br>";
 
+ out.innerHTML += "children : <br>";
+
+ for(let i=0 ; i<inp.children.length ; i++) {
+  out.innerHTML += "&nbspchild " + i + " : " + inp.children[i] + " : " + inp.children[i].tagName + "<br>";
+ }
 </script>
