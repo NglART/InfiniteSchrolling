@@ -1,0 +1,59 @@
+<style>
+#myDiv {
+ border: 4px solid black;
+ height: 100px;
+ margin: 20px;
+ padding: 30px;
+ width : 200px;
+}
+#myDiv1 {
+ border-left: 1px solid red;
+ height: 160px;
+ position: fixed;
+ top: 51px;
+ left:310px;
+}
+#myDiv2 {
+ border-left: 1px solid red;
+ height: 260px;
+ position: fixed;
+ top: 160px;
+ left:100px;
+ transform: rotate(90deg);
+}
+#myDiv3 {
+ border-left: 1px solid red;
+ height: 168px;
+ position: fixed;
+ top: 47px;
+ left:300px;
+}
+#myDiv4 {
+ border-left: 1px solid red;
+ height: 268px;
+ position: fixed;
+ top: 180px;
+ left:64px;
+ transform: rotate(90deg);
+}
+</style>
+
+<div>Information about next div</div>
+<div id="myDiv">Div content</div>
+<div id="myDiv1"></div>
+<div id="myDiv2"></div>
+<div id="myDiv3"></div>
+<div id="myDiv4"></div>
+
+<script>
+
+ var element = document.querySelector("#myDiv");
+ document.querySelector("#myDiv1").innerHTML = "clientHeight " + element.clientHeight + "<br>" + "height + padding";
+
+document.querySelector("#myDiv2").innerHTML = "clientWidth " + element.clientWidth + "<br>" + "width + padding";
+
+document.querySelector("#myDiv3").innerHTML = "<br><br><br>offsetHeight " + element.offsetHeight + "<br>" + "height + padding + border";
+
+document.querySelector("#myDiv4").innerHTML = "<br><br><br>offsetWidth " + element.offsetWidth + "<br>" + "width + padding + border";
+ 
+</script>
