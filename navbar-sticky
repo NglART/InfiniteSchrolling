@@ -1,0 +1,70 @@
+<head>
+
+<style>
+ .navHide {
+  display : none;
+ }
+ .navHide2 {
+  opacity: 0.5; 
+ }
+ .sticky {
+  position: fixed;
+  top: 0;
+ }
+</style>
+
+</head>
+
+<body>
+ 
+ <div id="header">
+  <h2>Sticky Nav</h2>
+  <p>Scroll dawn for nav sticky effect</p>
+ </div>
+ 
+ <div id="nav2" class="navHide">
+  <a href="javascropt:void(0)">Link1</a>
+  <a href="javascropt:void(0)">Link2</a>
+  <a href="javascropt:void(0)">Link3</a>
+ </div>
+ <div id="nav">
+  <a href="javascropt:void(0)">Link1</a>
+  <a href="javascropt:void(0)">Link2</a>
+  <a href="javascropt:void(0)">Link3</a>
+ </div>
+
+ <div id="content">
+
+ </div>
+
+<script>
+
+ var navbar = document.querySelector("#nav");
+ var navbar2 = document.querySelector("#nav2");
+
+ document.body.onload = function() {
+  var conten = document.querySelector("#content");
+  for(let i=0 ; i<100 ; i++){
+   content.innerHTML += "<p>content " + i + "</p>";
+  }
+  var pconten = document.getElementById("content").querySelectorAll("p");
+  pconten[0].innerHTML = "navbar offsetTop : " + navbar.offsetTop;
+ } 
+
+ document.body.onscroll = function() {
+  document.getElementById("content").querySelectorAll("p")[1].innerHTML = "window pageYOffset : " + window.pageYOffset;
+  if (window.pageYOffset >= navbar.offsetTop) {
+   navbar2.classList.remove("navHide");
+   navbar2.classList.add("sticky"); 
+   navbar.classList.add("navHide2");
+  } else {
+   navbar2.classList.add("navHide");
+   navbar2.classList.remove("sticky"); 
+   navbar.classList.remove("navHide2");
+  }
+ }
+
+
+</script>
+
+</body>
