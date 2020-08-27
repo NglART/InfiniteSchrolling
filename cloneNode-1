@@ -1,0 +1,13 @@
+<style>
+.colorRed {
+ color: red;
+}
+</style>
+
+<div><p class="colorRed">I am a clon, click to another new</p></div>
+
+<script>
+ document.querySelector("div").onclick = function() {
+  document.querySelector("div").appendChild(document.querySelector("div").lastChild.cloneNode(true));
+ }
+</script>
