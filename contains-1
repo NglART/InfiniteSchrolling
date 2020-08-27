@@ -1,0 +1,11 @@
+<div>this div element contains span element?(click)<span></span></div>
+<div>this div element contains span element?(click)</div>
+
+<script>
+ document.querySelectorAll("div")[0].onclick = function() {
+  alert(this.contains(document.querySelector("span"))+"\n"+this.innerHTML);
+ }
+ document.querySelectorAll("div")[1].onclick = function() {
+  alert(this.contains(document.querySelector("span"))+"\n"+this.innerHTML);
+ }
+</script>
