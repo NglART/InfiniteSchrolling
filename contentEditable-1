@@ -1,0 +1,16 @@
+<div>
+ <p>text</p>
+ <button>click to edit p</button>
+</div>
+
+<script>
+ document.querySelector("button").onclick = function() {
+  if (document.querySelector("p").contentEditable=="inherit" || document.querySelector("p").contentEditable=="false") {
+  document.querySelector("p").contentEditable = true;
+  document.querySelector("button").innerHTML = "end edit p";
+  } else {
+   document.querySelector("p").contentEditable = false;
+   document.querySelector("button").innerHTML = "click to edit p";
+  }
+ }
+</script>
