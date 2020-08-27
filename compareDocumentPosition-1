@@ -1,0 +1,34 @@
+<head>
+<style>
+#p3, #p4 {
+ position: fixed;
+ top: 170;
+}
+</style>
+</head>
+<body>
+<p id="p1">p1<span id="span1">span1</span></p>
+<p id="p2">p1<span id="span2">span2</span></p>
+<p id="p3">p1<span id="span3">span3</span></p>
+<p id="p4">p1<span id="span4">span4</span></p>
+
+<script>
+ document.body.innerHTML += "<br><br>";
+ var arrP = document.querySelectorAll("p");
+ var arrSpan = document.querySelectorAll("span");
+ var arr = [];
+ for(let i=0 ; i<arrP.length ; i++) {
+  arr.push(arrP[i].id);
+ }
+ for(let i=0 ; i<arrSpan.length ; i++) {
+  arr.push(arrSpan[i].id);
+ }
+ for(let i in arr) {
+  for(let j in arr) {
+   let id1 = document.querySelector("#"+arr[i]);
+   let id2 = document.querySelector("#"+arr[j]);
+   document.body.innerHTML += arr[i] + ".compareDocumentPosition(" + arr[j] +") : " + id1.compareDocumentPosition(id2) + "<br>";
+  }
+ }
+</script>
+</body>
