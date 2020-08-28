@@ -1,0 +1,56 @@
+<style>
+ div {
+  border: 2px solid black;
+ }
+ 
+</style>
+
+<div id="myDiv">
+ <p>p element 1</p><br><p>p element 2</p>
+ <span>span element</span>
+</div>
+<p id="out"></p>
+
+<script>
+ var out = document.querySelector("#out");
+ var inp = document.querySelector("#myDiv");
+ out.innerHTML = "childElementCount : " + inp.childElementCount + "<br>";
+
+ out.innerHTML += "childNodes : " + inp.childNodes + "<br>";
+
+ for(let i in inp.childNodes) {
+  out.innerHTML += "&nbsp" + i + " : " + inp.childNodes[i].nodeName + "&nbsp" + "<br>";
+  if(i==inp.childNodes.length-1) {
+   break;
+  }
+ }
+
+ out.innerHTML += "children  : " + inp.children + "<br>";
+
+ for(let i in inp.children) {
+  out.innerHTML += "&nbsp" + i + " : " + inp.children[i].nodeName + "&nbsp" + "<br>";
+  if(i==inp.children.length-1) {
+   break;
+  }
+ }
+
+ out.innerHTML += "firstChild : " + inp.firstChild.nodeName + "<br>"
+
+ out.innerHTML += "firstElementChild : " + inp.firstElementChild.nodeName + "<br>";
+
+ out.innerHTML += "lastChild : " + inp.lastChild.nodeName + "<br>";
+
+ out.innerHTML += "lastElementChild : " + inp.lastElementChild.nodeName + "<br>";
+
+ out.innerHTML += "parentNode : " + inp.parentNode.nodeName + "<br>";
+
+ out.innerHTML += "nextSibling : " + inp.firstChild.nextSibling.nodeName + "<br>";
+
+ out.innerHTML += "previousSibling : " + inp.lastChild.previousSibling.nodeName + "<br>";
+
+ out.innerHTML += "children : <br>";
+
+ for(let i=0 ; i<inp.children.length ; i++) {
+  out.innerHTML += "&nbspchild " + i + " : " + inp.children[i] + " : " + inp.children[i].tagName + "<br>";
+ }
+</script>
