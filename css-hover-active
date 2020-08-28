@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>   
+	<title>Este ejemplo cambia el color de un boton cuando el mouse pasa sobre el</title>   
+	<style type="text/css">
+    #Boton {
+      padding: 30px;
+      background: light-gray;
+      color: gray;
+    }
+    #Boton:hover {
+      padding: 30px;
+      background: blue;
+      color: white;
+    }
+    #Boton:active {
+      padding: 30px;
+      background: red;
+      color: black;
+    }
+	</style> 
+</head> 
+<body>   
+	<button id="Boton">Botón</button>
+</body> 
+</html> 
