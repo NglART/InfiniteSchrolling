@@ -1,0 +1,44 @@
+<div>
+<div id="div1">div1</div><div id="div2">div2</div>
+</div>
+
+<button>afterbegin</button>
+<button>afterend</button>
+<button>beforebegin</button>
+<button>beforeend</button>
+<br>
+
+Before:
+<p id="before"></p>
+After :
+<p id="after"></p>
+
+<script>
+ var div1 = document.querySelector("#div1");
+ var div2 = document.querySelector("#div2");
+
+document.querySelectorAll("button")[0].onclick = function() {
+ document.querySelector("#before").innerText = document.querySelector("div").innerHTML
+ div2.insertAdjacentText("afterbegin", "new Text");
+ document.querySelector("#after").innerText = document.querySelector("div").innerHTML;
+}
+
+document.querySelectorAll("button")[1].onclick = function() {
+ document.querySelector("#before").innerText = document.querySelector("div").innerHTML
+ div2.insertAdjacentText("afterend", "new Text");
+ document.querySelector("#after").innerText = document.querySelector("div").innerHTML;
+}
+
+document.querySelectorAll("button")[2].onclick = function() {
+ document.querySelector("#before").innerText = document.querySelector("div").innerHTML
+ div2.insertAdjacentText("beforebegin", "new Text");
+ document.querySelector("#after").innerText = document.querySelector("div").innerHTML;
+}
+
+document.querySelectorAll("button")[3].onclick = function() {
+ document.querySelector("#before").innerText = document.querySelector("div").innerHTML
+ div2.insertAdjacentText("beforeend", "new Text");
+ document.querySelector("#after").innerText = document.querySelector("div").innerHTML;
+}
+
+</script>
