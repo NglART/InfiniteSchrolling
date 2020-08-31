@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+#myDiv1 {
+ background-color: red;
+}
+</style>
+<style>
+#myDiv2 {
+ background-color: blue;
+}
+</style>
+</head>
+<body>
+<div id="myDiv1">div1</div>
+<div id="myDiv2">div2</div>
+<span></span>
+<script>
+ var spn = document.querySelector("span");
+ spn.innerText = document.head.innerHTML;
+ spn.innerHTML += "<br>";
+ var headChildren = document.querySelector("head").children;
+ spn.innerText += headChildren[0];
+ spn.innerHTML += "<br>";
+
+ spn.innerText += headChildren[0].innerHTML;
+ spn.innerHTML += "<br>";
+ 
+ var newStyle = `
+#myDiv1 {
+ background-color: green;
+}
+ `;
+
+ headChildren[0].innerHTML = newStyle;
+
+ spn.innerText += document.head.innerHTML;
+ spn.innerHTML += "<br>";
+</script>
+</body>
+</html>
