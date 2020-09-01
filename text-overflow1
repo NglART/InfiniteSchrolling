@@ -1,0 +1,54 @@
+<style>
+div {
+ border: 15px solid black;
+ background-color: pink;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: visible;
+}
+input {
+ width: 100%;
+ height: 100px;
+}
+</style>
+
+<div>Naname nanajyuunana do no narabi de naku naku inanaku nanahan nanadai nan naku narabete naganagame.<br>斜め七十七度の並びで泣く泣くいななくナナハン七台難なく並べて長眺め<br><br>Nyanyame nyanyajyuunyanya do no nyarabi de nyaku nyaku inyanyaku nyanyahan nyanyadai nyan nyaku nyarabete nyaganyagame.<br>にゃにゃめにゃにゃじゅうにゃにゃどのにゃらびでにゃくにゃくいにゃにゃくにゃにゃはんにゃにゃだいにゃんにゃくにゃらべてにゃがにゃがめ</div>
+<br>
+
+<input type="button" value="textOverflow clip" name="clip"></input>
+<input type="button" value="textOverflow ellipsis" name="ellipsis"></input>
+<input type="button" value="textOverflow string" name="string"></input>
+<input type="button" value="textOverflow initial" name="initial"></input>
+<input type="button" value="textOverflow inherit" name="inherit"></input>
+
+<script>
+
+ var btn = document.querySelectorAll("input");
+ var myDiv = document.querySelector("div");
+
+ btn.forEach((e) => {
+  e.addEventListener("click",function() { 
+   switch(e.name){
+    case "clip" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+    case "ellipsis" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+    case "ellipsis" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+    case "string" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+    case "initial" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+    case "inherit" : 
+     myDiv.style.textOverflow = e.name;
+     break;
+   }
+  });
+ });
+
+</script>
