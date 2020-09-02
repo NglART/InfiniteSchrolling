@@ -1,0 +1,39 @@
+<style>
+textarea {
+ width: 100%;
+}
+</style>
+
+<textarea id="textarea1"></textarea>
+<button id="btn1">Push</button>
+<button id="btn2">Copy</button>
+<div id="myDiv"></div>
+<textarea id="textarea2"></textarea>
+
+<script>
+ 
+var txt = document.querySelector("#textarea1");
+var btn1 = document.querySelector("#btn1");
+var btn2 = document.querySelector("#btn2");
+
+btn1.onclick = function() {
+ document.querySelector("#myDiv").innerHTML="";
+ var txtValue = txt.value.split(/\n\r?/g);
+ for(i in txtValue) {
+  let space = document.createElement("span");
+  space.innerHTML = "&nbsp&nbsp&nbsp&nbsp";  
+  document.querySelector("#myDiv").appendChild(space);
+  var node = document.createTextNode(txtValue[i]);
+  document.querySelector("#myDiv").appendChild(node);
+  let lineBreak = document.createElement("br");
+  document.querySelector("#myDiv").appendChild(lineBreak);  
+ }
+}
+
+btn2.onclick = function() {
+ document.querySelector("#textarea2").value = document.querySelector("#myDiv").innerText;
+ document.querySelector("#textarea2").select();
+ document.execCommand('copy');
+}
+
+</script>
