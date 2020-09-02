@@ -1,0 +1,16 @@
+<div>
+ <p>I'm p</p>
+</div>
+<button>outerHTML</button>
+<span></span>
+
+<script>
+ spn = document.querySelector("span");
+ document.querySelector("button").onclick = function() {
+  spn.innerHTML = "<br>before:<br>";
+  spn.innerText += document.querySelector("div").innerHTML;
+  document.querySelector("p").outerHTML = "<span>I'm span</span>";
+  spn.innerHTML += "<br>after:<br>";
+  spn.innerText += document.querySelector("div").innerHTML;
+ }
+</script>
