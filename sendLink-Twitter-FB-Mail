@@ -1,0 +1,15 @@
+<button>Twitter</button>
+<button>Facebook</button>
+<button>Mail</button>
+<script>
+ var btn = document.querySelectorAll("button");
+ btn[0].onclick = function() {
+  window.open('//twitter.com/intent/tweet?text=' + window.location.href); 
+ }
+ btn[1].onclick = function() {
+  window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href); 
+ }
+ btn[2].onclick = function() {
+  window.open(window.location='mailto:?body='+window.location.href); 
+ }
+</script>
