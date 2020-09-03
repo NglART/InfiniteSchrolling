@@ -36,4 +36,8 @@ btn2.onclick = function() {
  document.execCommand('copy');
 }
 
+document.querySelector("#textarea2").oncopy = function () {
+ alert(this.value);
+ this.blur();
+} 
 </script>
