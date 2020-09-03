@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<div></div>
+<video controls>
+  <source src="https://www.w3schools.com/jsref/mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+var myVideo = document.querySelector("video");
+var myDiv = document.querySelector("div");
+myVideo.onloadstart = function() {
+  myDiv.innerHTML += "onloadstart<br>";
+}
+myVideo.ondurationchange = function() {
+  myDiv.innerHTML += "ondurationchange<br>";
+} 
+myVideo.onloadedmetadata = function() {
+  myDiv.innerHTML += "onloadedmetadata<br>";
+}
+myVideo.onloadeddata = function() {
+  myDiv.innerHTML += "onloadeddata<br>";
+} 
+myVideo.onprogress = function() {
+  myDiv.innerHTML += "onprogress<br>";
+} 
+myVideo.oncanplay = function() {
+  myDiv.innerHTML += "oncanplay<br>";
+}
+myVideo.oncanplaythrough = function() {
+  myDiv.innerHTML += "oncanplaythrough<br>";
+}
+myVideo.onended = function() {
+  myDiv.innerHTML += "onended<br>";
+}
+</script>
+
+</body> 
+</html>
+ 
