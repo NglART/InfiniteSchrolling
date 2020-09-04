@@ -1,0 +1,14 @@
+<input type="text" onfocus="funcOnfocus()" onfocusin="funcOnfocusin()" onfocusout="funcOnfocusout()" ></input>
+
+<script>
+ npt = document.querySelector("input");
+ function funcOnfocusin() {
+  npt.style.backgroundColor = "black";
+ }
+ function funcOnfocusin() {
+  npt.style.backgroundColor = "green";
+ }
+ function funcOnfocusout() {
+  npt.style.backgroundColor = "blue";
+ }
+</script>
