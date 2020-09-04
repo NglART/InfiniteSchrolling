@@ -11,6 +11,7 @@
 <script>
 var myVideo = document.querySelector("video");
 var myDiv = document.querySelector("div");
+
 myVideo.onloadstart = function() {
   myDiv.innerHTML += "onloadstart<br>";
 }
@@ -31,6 +32,9 @@ myVideo.oncanplay = function() {
 }
 myVideo.oncanplaythrough = function() {
   myDiv.innerHTML += "oncanplaythrough<br>";
+}
+myVideo.onplay = function() {
+  myDiv.innerHTML += "onplay<br>";
 }
 myVideo.onended = function() {
   myDiv.innerHTML += "onended<br>";
