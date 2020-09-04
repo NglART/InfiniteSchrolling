@@ -36,6 +36,9 @@ myVideo.oncanplaythrough = function() {
 myVideo.onplay = function() {
   myDiv.innerHTML += "onplay<br>";
 }
+myVideo.onplaying = function() {
+  myDiv.innerHTML += "onplaying<br>";
+} 
 myVideo.onended = function() {
   myDiv.innerHTML += "onended<br>";
 }
