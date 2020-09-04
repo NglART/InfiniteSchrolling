@@ -1,0 +1,11 @@
+<body>
+<p>Switch internet to test</p>
+<script>
+document.body.ononline = function() {
+ alert("online");
+}
+document.body.onoffline = function() {
+ alert("offline");
+}
+</script>
+</body>
