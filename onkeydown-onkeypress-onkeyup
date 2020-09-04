@@ -1,0 +1,14 @@
+<input type="text" ></input>
+
+<script>
+ npt = document.querySelector("input");
+ npt.onkeydown = function() {
+  npt.style.backgroundColor = "red";
+ }
+ npt.onkeypress = function() {
+  npt.style.backgroundColor = "green";
+ }
+ npt.onkeyup = function() {
+  npt.style.backgroundColor = "blue";
+ }
+</script>
