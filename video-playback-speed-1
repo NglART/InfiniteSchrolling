@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<head>
+<style>
+div {
+ display: flex;
+}
+button {
+ width: 100%;
+}
+p {
+ text-align: center;
+}
+</style>
+<html> 
+<body> 
+<div>
+<button><</button>
+<video controls>
+  <source src="https://www.w3schools.com/jsref/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<button>></button>
+</div>
+<p></p>
+<script>
+var myVideo = document.querySelector("video");
+var myDiv = document.querySelector("div");
+ btn = document.querySelectorAll("button");
+ btn[0].onclick = function() {
+  myVideo.playbackRate = (myVideo.playbackRate*10 - 1)/10;
+  document.querySelector("p").innerHTML = myVideo.playbackRate;
+ } 
+ btn[1].onclick = function() {
+  myVideo.playbackRate = (myVideo.playbackRate*10 + 1)/10;
+  document.querySelector("p").innerHTML = myVideo.playbackRate;
+ } 
+</script>
+</body> 
+</html>
+ 
