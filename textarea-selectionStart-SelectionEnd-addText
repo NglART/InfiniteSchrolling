@@ -1,0 +1,15 @@
+<textarea></textarea>
+<button>Add "new "</button>
+
+<script>
+var txt = document.querySelector('textarea');
+var btn = document.querySelector('button');
+var newTxt = 'new ';
+
+btn.addEventListener('click', e => {
+  var op = txt.selectionStart;
+  var ed = txt.selectionEnd;
+  var txtVal = txt.value;
+  txt.value = txtVal.slice(0, op) + newTxt + txtVal.slice(ed);  
+});
+</script>
