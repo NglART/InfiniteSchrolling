@@ -4,10 +4,9 @@
 <div></div>
 <video controls>
   <source src="https://www.w3schools.com/jsref/mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
-
+<button> Set slow motion </button>
 <script>
 var myVideo = document.querySelector("video");
 var myDiv = document.querySelector("div");
@@ -42,6 +41,13 @@ myVideo.onplaying = function() {
 myVideo.onended = function() {
   myDiv.innerHTML += "onended<br>";
 }
+myVideo.onratechange = function() {
+  myDiv.innerHTML += "onratechange<br>";
+}
+
+document.querySelector("button").onclick = function() {
+  myVideo.playbackRate = 0.3;
+ } 
 </script>
 
 </body> 
