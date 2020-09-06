@@ -1,0 +1,6 @@
+<input type="search"></input>
+<script>
+document.querySelector("input").onsearch = function() {
+ alert("searchng for : " + document.querySelector("input").value);
+}
+</script>
