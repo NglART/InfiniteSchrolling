@@ -50,10 +50,13 @@ myVideo.onseeked = function() {
 myVideo.onseeking = function() {
   myDiv.innerHTML += "onseeking " + myVideo.currentTime + "<br>";
 }
+myVideo.ontimeupdate = function() {
+  myDiv.innerHTML += "ontimeupdate " + myVideo.currentTime + "<br>";
+}
 
 document.querySelector("button").onclick = function() {
- myVideo.playbackRate = 0.3;
-} 
+  myVideo.playbackRate = 0.3;
+ } 
 </script>
 
 </body> 
