@@ -12,48 +12,48 @@ var myVideo = document.querySelector("video");
 var myDiv = document.querySelector("div");
 
 myVideo.onloadstart = function() {
-  myDiv.innerHTML += "onloadstart<br>";
+  myDiv.innerHTML += "onloadstart " + myVideo.currentTime + "<br>";
 }
 myVideo.ondurationchange = function() {
-  myDiv.innerHTML += "ondurationchange<br>";
+  myDiv.innerHTML += "ondurationchange " + myVideo.currentTime + "<br>";
 } 
 myVideo.onloadedmetadata = function() {
-  myDiv.innerHTML += "onloadedmetadata<br>";
+  myDiv.innerHTML += "onloadedmetadata " + myVideo.currentTime + "<br>";
 }
 myVideo.onloadeddata = function() {
-  myDiv.innerHTML += "onloadeddata<br>";
+  myDiv.innerHTML += "onloadeddata " + myVideo.currentTime + "<br>";
 } 
 myVideo.onprogress = function() {
-  myDiv.innerHTML += "onprogress<br>";
+  myDiv.innerHTML += "onprogress " + myVideo.currentTime + "<br>";
 } 
 myVideo.oncanplay = function() {
-  myDiv.innerHTML += "oncanplay<br>";
+  myDiv.innerHTML += "oncanplay " + myVideo.currentTime + "<br>";
 }
 myVideo.oncanplaythrough = function() {
-  myDiv.innerHTML += "oncanplaythrough<br>";
+  myDiv.innerHTML += "oncanplaythrough " + myVideo.currentTime + "<br>";
 }
 myVideo.onplay = function() {
-  myDiv.innerHTML += "onplay<br>";
+  myDiv.innerHTML += "onplay " + myVideo.currentTime + "<br>";
 }
 myVideo.onplaying = function() {
-  myDiv.innerHTML += "onplaying<br>";
+  myDiv.innerHTML += "onplaying " + myVideo.currentTime + "<br>";
 } 
 myVideo.onended = function() {
-  myDiv.innerHTML += "onended<br>";
+  myDiv.innerHTML += "onended " + myVideo.currentTime + "<br>";
 }
 myVideo.onratechange = function() {
-  myDiv.innerHTML += "onratechange<br>";
+  myDiv.innerHTML += "onratechange " + myVideo.currentTime + "<br>";
 }
 myVideo.onseeked = function() {
-  myDiv.innerHTML += "onseeked<br>";
+  myDiv.innerHTML += "onseeked " + myVideo.currentTime + "<br>";
 }
 myVideo.onseeking = function() {
-  myDiv.innerHTML += "onseeking<br>";
+  myDiv.innerHTML += "onseeking " + myVideo.currentTime + "<br>";
 }
 
 document.querySelector("button").onclick = function() {
-  myVideo.playbackRate = 0.3;
- } 
+ myVideo.playbackRate = 0.3;
+} 
 </script>
 
 </body> 
