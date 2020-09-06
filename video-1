@@ -47,6 +47,9 @@ myVideo.onratechange = function() {
 myVideo.onseeked = function() {
   myDiv.innerHTML += "onseeked<br>";
 }
+myVideo.onseeking = function() {
+  myDiv.innerHTML += "onseeking<br>";
+}
 
 document.querySelector("button").onclick = function() {
   myVideo.playbackRate = 0.3;
