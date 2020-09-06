@@ -1,0 +1,11 @@
+<form>
+  <input type="text">
+  <input type="reset">
+</form>
+
+<script>
+document.querySelector("form").onreset = function() {
+  alert("Reset");
+}
+</script>
+
