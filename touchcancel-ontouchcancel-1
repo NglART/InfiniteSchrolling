@@ -1,0 +1,7 @@
+<p>touch this and slice to test touchcancel</p>
+<p></p>
+<script>
+ document.querySelectorAll("p")[0].ontouchcancel = function() {
+  document.querySelectorAll("p")[1].innerHTML = "ontouchcancel";
+ }
+</script>
