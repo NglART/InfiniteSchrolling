@@ -1,12 +1,12 @@
 <!DOCTYPE html> 
 <html> 
 <body> 
-<div></div>
 <video controls>
   <source src="https://www.w3schools.com/jsref/mov_bbb.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 <button> Set slow motion </button>
+<div></div>
 <script>
 var myVideo = document.querySelector("video");
 var myDiv = document.querySelector("div");
@@ -55,6 +55,9 @@ myVideo.ontimeupdate = function() {
 }
 myVideo.onvolumechange = function() {
   myDiv.innerHTML += "onvolumechange " + myVideo.currentTime + "<br>";
+}
+myVideo.onwaiting = function() {
+  myDiv.innerHTML += "onwaiting " + myVideo.currentTime + "<br>";
 }
 
 document.querySelector("button").onclick = function() {
