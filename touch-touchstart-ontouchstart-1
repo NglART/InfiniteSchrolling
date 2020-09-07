@@ -1,0 +1,7 @@
+<p>touch this and slice to test touchstart</p>
+<p></p>
+<script>
+ document.querySelectorAll("p")[0].ontouchstart = function() {
+  document.querySelectorAll("p")[1].innerHTML = "ontouchstart";
+ }
+</script>
