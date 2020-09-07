@@ -1,0 +1,12 @@
+<p>Click to open summary</p>
+
+<details ontoggle="myFunction()">
+<summary>Click here</summary>
+<p>Paragraph</p>
+</details>
+
+<script>
+function myFunction() {
+  alert("ontoggle");
+}
+</script>
