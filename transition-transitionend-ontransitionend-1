@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<style> 
+div {
+  width: 100px;
+  height: 20px;
+  background: red;
+  color: white;
+  transition: width 2s;
+}
+div:hover {
+  width: 400px;
+}
+</style>
+
+<div></div>
+
+<script>
+document.querySelector("div").ontransitionend = function() {
+  document.querySelector("div").innerHTML = "transitionend";
+}
+</script>
