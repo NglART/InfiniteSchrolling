@@ -1,0 +1,15 @@
+<style>
+p {
+ width: 100%;
+ height: 100%;
+ border: 1px solid black;
+}
+</style>
+<p></p>
+<script>
+ var theCSSpropWidth = window.getComputedStyle(document.querySelector("p"), null).getPropertyValue("width");
+ var theCSSpropHeight = window.getComputedStyle(document.querySelector("p"), null).getPropertyValue("height");
+ document.querySelector("p").ontouchmove = function(e) {
+  document.querySelector("p").innerHTML = e.touches[0].clientX + "<br>" + e.touches[0].clientY + "<br>" + theCSSpropWidth + "<br>" + theCSSpropHeight;
+ } 
+</script>
