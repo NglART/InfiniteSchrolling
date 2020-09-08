@@ -1,0 +1,25 @@
+<style> 
+div {
+  width: 100%;
+  height: 50px;
+  background: black;
+  color: white;
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 5s;
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 100px;}
+}
+</style>
+
+<div></div>
+
+<script>
+var x = document.querySelector("div");
+
+x.onanimationstart = function(e) {
+  x.innerHTML = "The animation-name is: " + e.animationName;
+}
+</script>
