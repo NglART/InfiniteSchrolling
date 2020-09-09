@@ -1,0 +1,6 @@
+<input type="button" value="0">
+<script>
+document.querySelector("input").onclick = function(e) {
+ document.querySelector("input").value = e.detail;
+}
+</script>
