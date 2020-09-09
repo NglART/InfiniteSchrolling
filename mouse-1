@@ -10,13 +10,13 @@ div {
 document.body.onmousedown = function(e) {
  switch(e.button) {
   case 0:
-   alert("left click");
+   alert(" left click ");
    break
   case 1:
-   alert("middle click");
+   alert(" middle click ");
    break
   case 2:
-   alert("right click");
+   alert(" right click ");
    break
  }
 }
