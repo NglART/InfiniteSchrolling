@@ -1,0 +1,23 @@
+<input type="text">
+<p></p>
+<script>
+ document.querySelector("input").onkeypress = function(e) {
+  document.querySelector("p").innerHTML = "charCode: " + e.charCode;
+ }
+ document.querySelector("input").onkeydown = function(e) {
+  switch(true) {
+   case e.altKey:
+    document.querySelector("p").innerHTML = "altKey: " + e.altKey;
+    break;
+   case e.ctrlKey:
+    document.querySelector("p").innerHTML = "ctrlKey: " + e.ctrlKey;
+    break;
+   case e.metaKey:
+    document.querySelector("p").innerHTML = "metaKey: " + e.metaKey;
+    break;
+   case e.shiftKey:
+    document.querySelector("p").innerHTML = "shiftKey: " + e.shiftKey;
+    break;
+  }
+ }
+</script>
