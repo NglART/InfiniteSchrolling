@@ -2,7 +2,7 @@
 <p></p>
 <script>
  document.querySelector("input").onkeypress = function(e) {
-  document.querySelector("p").innerHTML = "charCode: " + e.charCode;
+  document.querySelector("p").innerHTML = "charCode: " + e.charCode + "<br>" + "code: " + e.code;
  }
  document.querySelector("input").onkeydown = function(e) {
   switch(true) {
