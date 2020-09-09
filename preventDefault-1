@@ -5,5 +5,6 @@
 document.querySelector("input").onclick = function(e){
  document.querySelector("p").innerHTML = "this event is cancelable with preventDefault ? " + e.cancelable;
  e.preventDefault();
+ document.querySelector("p").innerHTML += "<br>preventDefault ? " + e.defaultPrevented;
 }
 </script>
