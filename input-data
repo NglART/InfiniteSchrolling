@@ -1,0 +1,7 @@
+<input type="text">
+<p></p>
+<script>
+document.querySelector("input").oninput = function(e) {
+ document.querySelector("p").innerHTML = e.data;
+}
+</script>
