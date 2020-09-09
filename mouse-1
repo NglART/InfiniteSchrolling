@@ -24,7 +24,6 @@ document.body.onmousedown = function(e) {
    break
  }
 
- myDiv.innerHTML += "buttons: ";
  myDiv.innerHTML += "<br>buttons: " + e.buttons;
 }
 </script>
