@@ -1,0 +1,20 @@
+<input type="text">
+<p></p>
+<script>
+ document.querySelector("input").onkeydown = function(e) {
+  switch(e.location) {
+   case 0:
+   document.querySelector("p").innerHTML = "standard key: " + e.location;
+   break;
+   case 1:
+   document.querySelector("p").innerHTML = "left CTRL: " + e.location;
+   break;
+   case 2:
+   document.querySelector("p").innerHTML = "rigth CTRL: " + e.location;
+   break;
+   case 3:
+   document.querySelector("p").innerHTML = "numeric keypad: " + e.location;
+   break;
+  }
+ }
+</script>
