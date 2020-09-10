@@ -1,0 +1,14 @@
+<body>
+<button>Try it</button>
+<p id="demo"></p>
+<script>
+document.querySelector("button").onclick = function() {
+  location.hash = "newHash";
+}
+
+document.body.onhashchange = function(e) {
+  document.querySelector("p").innerHTML = "Prev URL: " + e.oldURL 
+  + "<br>New URL: " + event.newURL;
+}
+</script>
+</body>
