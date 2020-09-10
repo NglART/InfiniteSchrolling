@@ -1,0 +1,24 @@
+<style> 
+*  {
+ background-color: green;
+}
+div {
+ width: 50%; 
+ height: 50%;
+ color: white;
+ background-color: black;
+ position: relative;
+ top: 25%;
+ left: 25%;
+}
+</style>
+
+<div>
+</div>
+
+<script>
+var x = document.querySelector("div");
+x.onmouseover = function(e) {
+ this.innerHTML = e.relatedTarget.tagName ;
+}  
+</script>
