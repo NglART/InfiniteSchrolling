@@ -1,0 +1,7 @@
+<textarea></textarea>
+<p></p>
+<script>
+ document.querySelector("textarea").oninput = function(e) {
+  document.querySelector("p").innerHTML = e.inputType;
+ }
+</script>
