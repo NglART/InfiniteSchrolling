@@ -9,6 +9,6 @@ div {
 <div></div>
 <script>
 document.querySelector("div").onmousemove = function(e) {
- this.innerHTML = "X: " + e.pageX + "<br>Y: " + e.pageY;
+ this.innerHTML = "pageX: " + e.pageX + "<br>pageY: " + e.pageY + "<br>screenX: " + e.screenX + "<br>screenY: " + e.screenY;
 }
 </script>
