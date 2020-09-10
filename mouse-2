@@ -1,0 +1,14 @@
+<style>
+div {
+ color: white;
+ background-color: black;
+ width: 100%;
+ height: 100%;
+}
+</style>
+<div></div>
+<script>
+document.querySelector("div").onmousemove = function(e) {
+ this.innerHTML = "X: " + e.pageX + "<br>Y: " + e.pageY;
+}
+</script>
