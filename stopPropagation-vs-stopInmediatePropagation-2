@@ -1,0 +1,26 @@
+<button>stopImmediatePropagation</button>
+<button>stopPropagation doesn't work</button>
+
+<script>
+
+function myFunction1(event) {
+ alert ("1");
+ event.stopImmediatePropagation(); // Try to comment this
+}
+var x = document.querySelectorAll("button");
+x[0].addEventListener("click", myFunction1);
+x[0].addEventListener("click", function() {
+ alert("2");
+});
+
+function myFunction2(event) {
+ alert ("1");
+ event.stopPropagation(); // Try to comment this
+}
+var x = document.querySelectorAll("button");
+x[1].addEventListener("click", myFunction2);
+x[1].addEventListener("click", function() {
+ alert("2");
+});
+
+</script>
