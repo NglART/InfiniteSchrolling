@@ -1,0 +1,47 @@
+<style>
+div {
+ padding: 50px;
+ background-color: rgba(0, 0, 0, 0.7);
+ color: white;
+ text-align: center;
+ cursor: pointer;
+}
+</style>
+
+<div>
+<div>DIV 2
+  <div>DIV 1</div>
+</div>
+stopPropagation:
+<input type="checkbox">
+</div>
+
+<div>
+<div>DIV 2
+  <div>DIV 1</div>
+</div>
+stopInmediatePropagation:
+<input type="checkbox">
+</div>
+
+<script>
+document.querySelectorAll("div")[2].onclick = function(e) {
+  alert("DIV 1");
+  if(document.querySelectorAll("input")[0].checked) {
+    e.stopPropagation();
+  }
+}
+document.querySelectorAll("div")[1].onclick = function() {
+  alert("DIV 2");
+}
+
+document.querySelectorAll("div")[5].onclick = function(e) {
+  alert("DIV 1");
+  if(document.querySelectorAll("input")[1].checked) {
+    e.stopInmediatePropagation();
+  }
+}
+document.querySelectorAll("div")[4].onclick = function() {
+  alert("DIV 2");
+}
+</script>
