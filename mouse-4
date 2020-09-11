@@ -1,0 +1,10 @@
+<textarea></textarea>
+<input type="text"></type>
+<script>
+ document.querySelector("textarea").onfocus = function(e){
+  alert(e.relatedTarget.tagName + " lose focus");
+ }
+ document.querySelector("input").onfocus = function(e){
+  alert(e.relatedTarget.tagName + " lose focus");
+ }
+</script>
