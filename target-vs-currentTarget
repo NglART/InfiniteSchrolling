@@ -8,6 +8,6 @@ div {
 <div></div>
 <script>
  document.body.onclick = function(e) {
-  alert(e.currentTarget + "\n" + e.currentTarget.nodeName);
+  alert(e.currentTarget + "\n" + e.currentTarget.nodeName + "\n" + e.target + "\n" + e.target.nodeName);
  }
 </script>
