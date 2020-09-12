@@ -1,0 +1,38 @@
+<style>
+p, div {
+ width: 100%;
+ color: white;
+ padding: 0;
+ margin: 0;
+ cursor: pointer;
+}
+#p1 {
+ background-color: red;
+}
+#p2 {
+ background-color: green;
+}
+#p3 {
+ background-color: blue;
+}
+div {
+ background-color: black;
+}
+</style>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<div id="div1"></div>
+<span></span>
+
+<script>
+ document.querySelector("#p1").innerHTML = document.querySelector("#p1").getBoundingClientRect().left + " " + document.querySelector("#p1").getBoundingClientRect().top;
+ document.querySelector("#p2").innerHTML = document.querySelector("#p2").getBoundingClientRect().left + " " + document.querySelector("#p2").getBoundingClientRect().top;
+ document.querySelector("#p3").innerHTML = document.querySelector("#p3").getBoundingClientRect().left + " " + document.querySelector("#p3").getBoundingClientRect().top;
+ document.querySelector("#div1").innerHTML = document.querySelector("#div1").getBoundingClientRect().left + " " + document.querySelector("#div1").getBoundingClientRect().top;
+ document.querySelector("#p1").onclick = function() {
+  this.style.backgroundColor = "pink";
+ }
+ document.elementFromPoint(9, 9).click();
+</script>
