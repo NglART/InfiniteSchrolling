@@ -1,0 +1,18 @@
+<div>
+<input type="text">
+</div>
+<p></p>
+<script>
+
+document.querySelector("input").onkeydown = function(e) {
+ document.querySelector("p").innerHTML = "CapsLock : " + e.getModifierState("CapsLock") + "<br>";
+ document.querySelector("p").innerHTML += "Alt : " + e.getModifierState("Alt") + "<br>";
+ document.querySelector("p").innerHTML += "AltGraph : " + e.getModifierState("AltGraph") + "<br>";
+ document.querySelector("p").innerHTML += "Control : " + e.getModifierState("Control") + "<br>";
+ document.querySelector("p").innerHTML += "Meta : " + e.getModifierState("Meta") + "<br>";
+ document.querySelector("p").innerHTML += "NumLock : " + e.getModifierState("NumLock") + "<br>";
+ document.querySelector("p").innerHTML += "ScrollLock : " + e.getModifierState("ScrollLock") + "<br>";
+ document.querySelector("p").innerHTML += "Shift : " + e.getModifierState("Shift") + "<br>";
+}
+
+</script>
