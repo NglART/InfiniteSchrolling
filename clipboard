@@ -1,0 +1,13 @@
+<textarea></textarea>
+<p></p>
+<script>
+document.querySelector("textarea").oncopy = function(e){
+ document.querySelector("p").innerHTML = e.type;
+}
+document.querySelector("textarea").oncut = function(e){
+ document.querySelector("p").innerHTML = e.type;
+}
+document.querySelector("textarea").onpaste = function(e){
+ document.querySelector("p").innerHTML = e.type;
+}
+</script>
