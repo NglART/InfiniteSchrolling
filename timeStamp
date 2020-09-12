@@ -1,0 +1,7 @@
+<button>Time since the page was loaded in milliseconds</button>
+</p></p>
+<script>
+document.querySelector("button").onclick = function(e) {
+ document.querySelector("p").innerHTML = e.timeStamp;
+}
+</script>
