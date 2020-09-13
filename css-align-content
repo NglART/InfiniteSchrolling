@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<style> 
+.main {
+  width: 150px;
+  height: 150px;
+  background: black;
+  color: white;
+  transition: width 1s;
+  display: flex;
+  flex-flow: row wrap;
+}
+#main1 {
+  align-content: stretch;
+}
+#main2 {
+  align-content: center;
+}
+#main3 {
+  align-content: flex-start;
+}
+#main4 {
+  align-content: flex-end;
+}
+#main5 {
+  align-content: space-between;
+}
+#main6 {
+  align-content: space-around;
+}
+#main7 {
+  align-content: initial;
+}
+#main8 {
+  align-content: inherit;
+}
+.main div {
+  width: 50px;
+  height: 50px;
+}
+.main:hover {
+  width: 500px;
+}
+</style>
+
+<div class="main" id="main1">
+  <div style="background-color:coral;">s</div>
+  <div style="background-color:lightblue;">t</div>
+  <div style="background-color:khaki;">r</div>
+  <div style="background-color:pink;">e</div>
+  <div style="background-color:lightgrey;">t</div>
+  <div style="background-color:lightgreen;">c</div>
+  <div style="background-color:red;">h</div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+</div>
+
+<div class="main" id="main2">
+  <div style="background-color:coral;">c</div>
+  <div style="background-color:lightblue;">e</div>
+  <div style="background-color:khaki;">n</div>
+  <div style="background-color:pink;">t</div>
+  <div style="background-color:lightgrey;">e</div>
+  <div style="background-color:lightgreen;">r</div>
+  <div style="background-color:red;"></div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+</div><span></span>
+
+<div class="main" id="main3">
+  <div style="background-color:coral;">f</div>
+  <div style="background-color:lightblue;">l</div>
+  <div style="background-color:khaki;">e</div>
+  <div style="background-color:pink;">x</div>
+  <div style="background-color:lightgrey;">-</div>
+  <div style="background-color:lightgreen;">s</div>
+  <div style="background-color:red;">t</div>
+  <div style="background-color:green;">a</div>
+  <div style="background-color:blue;">r</div>
+</div><span></span>
+
+<div class="main" id="main4">
+  <div style="background-color:coral;">f</div>
+  <div style="background-color:lightblue;">l</div>
+  <div style="background-color:khaki;">e</div>
+  <div style="background-color:pink;">x</div>
+  <div style="background-color:lightgrey;">-</div>
+  <div style="background-color:lightgreen;">e</div>
+  <div style="background-color:red;">n</div>
+  <div style="background-color:green;">d</div>
+  <div style="background-color:blue;"></div>
+</div><span></span>
+
+<div class="main" id="main5">
+  <div style="background-color:coral;">s</div>
+  <div style="background-color:lightblue;">p</div>
+  <div style="background-color:khaki;">a</div>
+  <div style="background-color:pink;">c</div>
+  <div style="background-color:lightgrey;">e</div>
+  <div style="background-color:lightgreen;">-</div>
+  <div style="background-color:red;">b</div>
+  <div style="background-color:green;">e</div>
+  <div style="background-color:blue;">t</div>
+</div><span></span>
+
+<div class="main" id="main6">
+  <div style="background-color:coral;">s</div>
+  <div style="background-color:lightblue;">p</div>
+  <div style="background-color:khaki;">a</div>
+  <div style="background-color:pink;">c</div>
+  <div style="background-color:lightgrey;">e</div>
+  <div style="background-color:lightgreen;">-</div>
+  <div style="background-color:red;">a</div>
+  <div style="background-color:green;">r</div>
+  <div style="background-color:blue;">o</div>
+</div><span></span>
+
+<div class="main" id="main7">
+  <div style="background-color:coral;">i</div>
+  <div style="background-color:lightblue;">n</div>
+  <div style="background-color:khaki;">i</div>
+  <div style="background-color:pink;">t</div>
+  <div style="background-color:lightgrey;">i</div>
+  <div style="background-color:lightgreen;">a</div>
+  <div style="background-color:red;">l</div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+</div>
+
+<div class="main" id="main8">
+  <div style="background-color:coral;">i</div>
+  <div style="background-color:lightblue;">n</div>
+  <div style="background-color:khaki;">h</div>
+  <div style="background-color:pink;">e</div>
+  <div style="background-color:lightgrey;">r</div>
+  <div style="background-color:lightgreen;">i</div>
+  <div style="background-color:red;">t</div>
+  <div style="background-color:green;"></div>
+  <div style="background-color:blue;"></div>
+</div>
