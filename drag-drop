@@ -1,0 +1,60 @@
+<style>
+div {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+
+<div id="div1">
+ <img id="img1" src="https://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</div>
+<div id="div2">
+</div>
+<p></p>
+
+<script>
+
+var allDiv = document.querySelectorAll("div");
+var myP = document.querySelector("p");
+
+allDiv.forEach((element) => {
+
+element.ondragover = function(ev) {
+  ev.preventDefault();
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondragover<br>" + myP.innerHTML;
+}
+
+element.ondrop = function(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondrop<br>" + myP.innerHTML;
+}
+
+element.ondragenter = function(ev) {
+  ev.preventDefault();
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondragenter<br>" + myP.innerHTML;
+}
+
+element.ondragleave = function(ev) {
+  ev.preventDefault();
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondragleave<br>" + myP.innerHTML;
+}
+
+});
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondragstart<br>" + myP.innerHTML;
+}
+
+document.querySelector("img").ondrag = function(ev) {
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondrag<br>" + myP.innerHTML;
+}
+
+document.querySelector("img").ondragend = function(ev) {
+  myP.innerHTML = new Date() + " " + ev.target.id + " ondragend<br>" + myP.innerHTML;
+}
+</script>
