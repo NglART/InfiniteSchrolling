@@ -1,0 +1,23 @@
+<style>
+div {
+ color: white;
+ background-color: black;
+ height: 100%;
+ width: 100%;
+}
+</style>
+<div></div>
+<script>
+document.querySelector("div").ontouchstart = function(e) {
+ this.innerHTML = "";
+ for(let i=0; i< e.targetTouches.length ; i++) {
+  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + "<br>";
+ }
+}
+document.querySelector("div").ontouchend = function(e) {
+ this.innerHTML = "";
+ for(let i=0; i< e.targetTouches.length ; i++) {
+  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + "<br>";
+ }
+}
+</script>
