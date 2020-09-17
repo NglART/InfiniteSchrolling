@@ -11,13 +11,13 @@ div {
 document.querySelector("div").ontouchstart = function(e) {
  this.innerHTML = "";
  for(let i=0; i< e.targetTouches.length ; i++) {
-  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + "<br>";
+  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + " " + e.targetTouches[i].target.tagName + "<br>";
  }
 }
 document.querySelector("div").ontouchend = function(e) {
  this.innerHTML = "";
  for(let i=0; i< e.targetTouches.length ; i++) {
-  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + "<br>";
+  this.innerHTML += e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + " " + e.targetTouches[i].target.tagName + "<br>";
  }
 }
 </script>
