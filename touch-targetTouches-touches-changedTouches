@@ -1,0 +1,33 @@
+<style>
+div {
+ position: fixed;
+ top: 50px;
+ color: white;
+ background-color: black;
+ height: 100%;
+ width: 100%;
+}
+</style>
+<section>
+<div></div>
+</section>
+<script>
+document.querySelector("div").ontouchstart = function(e) {
+ this.innerHTML = "";
+ for(let i=0; i< e.targetTouches.length ; i++) {
+  this.innerHTML += "touchstart:<br> targetTouches " + e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + " " + e.targetTouches[i].target.tagName + "<br>touches " + e.touches[i].clientX + " " + e.touches[i].clientY + " " + e.touches[i].target.tagName + "<br>changedTouches " + e.changedTouches[i].clientX + " " + e.changedTouches[i].clientY + " " + e.changedTouches[i].target.tagName + "<br>";
+ }
+}
+document.querySelector("div").ontouchmove = function(e) {
+ this.innerHTML = "";
+ for(let i=0; i< e.targetTouches.length ; i++) {
+  this.innerHTML += "touchmove:<br> targetTouches " + e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + " " + e.targetTouches[i].target.tagName + "<br>touches " + e.touches[i].clientX + " " + e.touches[i].clientY + " " + e.touches[i].target.tagName + "<br>changedTouches " + e.changedTouches[i].clientX + " " + e.changedTouches[i].clientY + " " + e.changedTouches[i].target.tagName + "<br>";
+ }
+}
+document.querySelector("div").ontouchend = function(e) {
+ this.innerHTML = "";
+ for(let i=0; i< e.targetTouches.length ; i++) {
+  this.innerHTML += "touchend:<br> targetTouches " + e.targetTouches[i].clientX + " " + e.targetTouches[i].clientY + " " + e.targetTouches[i].target.tagName + "<br>touches " + e.touches[i].clientX + " " + e.touches[i].clientY + " " + e.touches[i].target.tagName + "<br>changedTouches " + e.changedTouches[i].clientX + " " + e.changedTouches[i].clientY + " " + e.changedTouches[i].target.tagName + "<br>";
+ }
+}
+</script>
