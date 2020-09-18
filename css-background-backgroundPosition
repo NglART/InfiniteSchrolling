@@ -1,0 +1,73 @@
+<style>
+div {
+ border: 1px solid black;
+ height: 50%;
+ width: 50%;
+ overflow-y: scroll;
+ background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqbkhp-8d10ec0c-f90d-4443-ba21-f2f6808f2428.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFia2hwLThkMTBlYzBjLWY5MGQtNDQ0My1iYTIxLWYyZjY4MDhmMjQyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.v-eyeU0AW-ROWDECC66nbnKI1PgNRcuWR5C2qYL0E88');
+ background-size: 10%;
+ background-repeat: no-repeat;
+}
+#bptopleft {
+ background-position: top left;
+}
+#bptopcenter{
+ background-position: top center;
+}
+#bptopright{
+ background-position: top right;
+}
+#bpcenterleft {
+ background-position: center left;
+}
+#bpcentercenter {
+ background-position: center center;
+}
+#bpcenterright {
+ background-position: center right;
+}
+#bpbottomleft {
+ background-position: bottom left;
+}
+#bpbottomcenter {
+ background-position: bottom center;
+}
+#bpbottomright {
+ background-position: bottom right;
+}
+#bpxy {
+ background-position: 30% 40%;
+}
+#bpxposypos {
+ background-position: 30px 40px;
+}
+</style>
+
+<div id="bptopleft"></div>
+<div id="bptopcenter"></div>
+<div id="bptopright"></div>
+<div id="bpcenterleft"></div>
+<div id="bpcentercenter"></div>
+<div id="bpcenterright"></div>
+<div id="bpbottomleft"></div>
+<div id="bpbottomcenter"></div>
+<div id="bpbottomright"></div>
+<div id="bpxy"></div>
+<div id="bpxposypos"></div>
+
+<script>
+ for(let i=0 ; i<50 ; i++) {
+  
+  document.querySelector("#bptopleft").innerHTML += "backgroundPosition top left<br>";
+  document.querySelector("#bptopcenter").innerHTML += "backgroundPosition top center<br>";
+  document.querySelector("#bptopright").innerHTML += "backgroundPosition top left<br>";
+  document.querySelector("#bpcenterleft").innerHTML += "backgroundPosition top left<br>";
+  document.querySelector("#bpcentercenter").innerHTML += "backgroundPosition top left<br>";
+  document.querySelector("#bpcenterright").innerHTML += "backgroundPosition center right<br>";
+  document.querySelector("#bpbottomleft").innerHTML += "backgroundPosition bottom left<br>";
+  document.querySelector("#bpbottomcenter").innerHTML += "backgroundPosition bottom center<br>";
+  document.querySelector("#bpbottomright").innerHTML += "backgroundPosition bottom right<br>";
+  document.querySelector("#bpxy").innerHTML += "backgroundPosition x% y%<br>";
+  document.querySelector("#bpxposypos").innerHTML += "backgroundPosition xpos ypos<br>";
+ }
+</script>
