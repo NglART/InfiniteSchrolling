@@ -1,0 +1,34 @@
+<style>
+div {
+ border: 20px dotted red;
+ height: 50%;
+ width: 50%;
+ padding: 50px;
+ overflow-y: scroll;
+ background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqbkhp-8d10ec0c-f90d-4443-ba21-f2f6808f2428.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFia2hwLThkMTBlYzBjLWY5MGQtNDQ0My1iYTIxLWYyZjY4MDhmMjQyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.v-eyeU0AW-ROWDECC66nbnKI1PgNRcuWR5C2qYL0E88') no-repeat;
+ background-size: 10%;
+}
+#boborderbox {
+ background-origin: border-box;
+}
+#bopaddingbox{
+ background-origin: padding-box;
+}
+#bocontentbox{
+ background-origin: content-box;
+}
+</style>
+
+<div id="boborderbox"></div>
+<div id="bopaddingbox"></div>
+<div id="bocontentbox"></div>
+
+<script>
+ for(let i=0 ; i<50 ; i++) {
+
+  document.querySelector("#boborderbox").innerHTML += "backgroundOrigin border-box (default)<br>";
+  document.querySelector("#bopaddingbox").innerHTML += "backgroundOrigin padding-box<br>";
+  document.querySelector("#bocontentbox").innerHTML += "backgroundOrigin content-box<br>";
+  
+ }
+</script>
