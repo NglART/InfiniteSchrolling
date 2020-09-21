@@ -1,0 +1,39 @@
+<style>
+div {
+ display: flex;
+}
+#bs {
+ border-spacing: 10px;
+}
+</style>
+
+<div>
+<table border>
+ <tr>
+  <th>border</th>
+  <th>spacing</th>
+ </tr>
+ <tr>
+  <td>default</td>
+  <td>default</td>
+ </tr>
+ <tr>
+  <td>Desc1</td>
+  <td>Desc2</td>
+ </tr>
+</table>
+<table border id="bs">
+ <tr>
+  <th>border</th>
+  <th>spacing</th>
+ </tr>
+ <tr>
+  <td>10px</td>
+  <td>Desc2</td>
+ </tr>
+ <tr>
+  <td>Desc1</td>
+  <td>Desc2</td>
+ </tr>
+</table>
+</div>
