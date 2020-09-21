@@ -1,0 +1,15 @@
+<style>
+#div1 {
+ border: 50px solid transparent;
+ padding: 20px;
+ border-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/de5j2fn-038902f0-0e9c-4ba6-ab99-d83b5af04d7d.png/v1/fill/w_1280,h_1280,strp/hii_border_by_nglbits_de5j2fn-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMjgwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZTVqMmZuLTAzODkwMmYwLTBlOWMtNGJhNi1hYjk5LWQ4M2I1YWYwNGQ3ZC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.vv3XFcG7vpaMla3lZsWgbgPJbCa94hAjrhGkpHoxL8w") 500 500 stretch;
+}
+#div2 {
+ border: 50px solid transparent;
+ padding: 20px;
+ border-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/de5j2fn-038902f0-0e9c-4ba6-ab99-d83b5af04d7d.png/v1/fill/w_1280,h_1280,strp/hii_border_by_nglbits_de5j2fn-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMjgwIiwicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZTVqMmZuLTAzODkwMmYwLTBlOWMtNGJhNi1hYjk5LWQ4M2I1YWYwNGQ3ZC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.vv3XFcG7vpaMla3lZsWgbgPJbCa94hAjrhGkpHoxL8w") 500 500 round;
+}
+</style>
+
+<div id="div1">borderImage="stretch"</div>
+<div id="div2">borderImage="round"</div>
