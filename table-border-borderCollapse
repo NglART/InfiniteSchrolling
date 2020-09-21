@@ -1,0 +1,43 @@
+
+<style>
+div {
+ display: flex;
+}
+#bcseparate {
+ border-collapse: separate;
+}
+#bccollapse {
+ border-collapse: collapse;
+}
+</style>
+
+<div>
+<table border id="bcseparate">
+ <tr>
+  <th>border</th>
+  <th>collapse</th>
+ </tr>
+ <tr>
+  <td>separate</td>
+  <td>default</td>
+ </tr>
+ <tr>
+  <td>Desc1</td>
+  <td>Desc2</td>
+ </tr>
+</table>
+<table border id="bccollapse">
+ <tr>
+  <th>border</th>
+  <th>collapse</th>
+ </tr>
+ <tr>
+  <td>collapse</td>
+  <td>Desc2</td>
+ </tr>
+ <tr>
+  <td>Desc1</td>
+  <td>Desc2</td>
+ </tr>
+</table>
+</div>
