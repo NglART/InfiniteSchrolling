@@ -1,0 +1,40 @@
+
+<style>
+section {
+ display: flex;
+} 
+p {
+ width: 50%;
+}
+div {
+  width: 400px;
+  height: 400px;
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqbkhp-8d10ec0c-f90d-4443-ba21-f2f6808f2428.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFia2hwLThkMTBlYzBjLWY5MGQtNDQ0My1iYTIxLWYyZjY4MDhmMjQyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.v-eyeU0AW-ROWDECC66nbnKI1PgNRcuWR5C2qYL0E88') no-repeat;
+  background-size: 100%;
+  color: red;
+  animation: mymove 2s infinite linear alternate;
+}
+#myDIV1 {
+ backface-visibility: visible;
+}
+
+#myDIV2 {
+ backface-visibility: hidden;
+}
+
+@keyframes mymove {
+  to {transform: rotateY(180deg);}
+}
+</style>
+
+<section>
+<div id="myDIV1">
+</div>
+<div id="myDIV2"> 
+</div>
+</section>
+<section>
+ <p>background-backfaceVisibility = "visible"</p>
+ <p>background-backfaceVisibility = "hidden"</p>
+<section>
+
