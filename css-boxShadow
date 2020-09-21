@@ -1,0 +1,16 @@
+<style>
+div {
+ width: 500px;
+ background: black;
+ color: white;
+ box-shadow: 10px 20px 20px lightblue;
+}
+</style>
+
+<div>
+ width: 200px;<br>
+ height: 100px;<br>
+ background: black;<br>
+ color: white;<br>
+ box-shadow: 10px 20px 20px lightblue;<br>
+</div>
