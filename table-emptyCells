@@ -1,0 +1,29 @@
+<style>
+#table1 {
+ empty-cells: show;
+}
+#table2 {
+ empty-cells: hide;
+}
+</style>
+
+<table border id="table1">
+ <tr>
+  <td>td1</td>
+  <td>td2</td>
+ </tr>
+ <tr>
+  <td>td3</td>
+  <td></td>
+ </tr>
+</table>
+<table border id="table2">
+ <tr>
+  <td>td1</td>
+  <td>td2</td>
+ </tr>
+ <tr>
+  <td>td3</td>
+  <td></td>
+ </tr>
+</table>
