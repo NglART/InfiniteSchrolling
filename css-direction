@@ -1,0 +1,10 @@
+<style>
+#dltr {
+ direction: ltr;
+}
+#drtl {
+ direction: rtl;
+}
+</style>
+<div id="dltr">direction left to right</div>
+<div id="drtl">direction right to left</div>
