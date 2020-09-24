@@ -1,0 +1,156 @@
+<style>
+div {
+ text-align: center;
+}
+img {
+ width: 50%;
+}
+</style>
+
+<div>blur
+ <label id="blurL">0</label>px
+ <input type="range" id="blurR" min="0" max="10" value="0"><br>
+ <img id="blurI"></img>
+</div>
+
+<div>brightness
+ <label id="brightnessL">100</label>%
+ <input type="range" id="brightnessR" min="0" max="300" value="100"><br>
+ <img id="brightnessI"></img>
+</div>
+
+<div>contrast
+ <label id="contrastL">100</label>%
+ <input type="range" id="contrastR" min="0" max="300" value="100"><br>
+ <img id="contrastI"></img>
+</div>
+
+<div>
+ drop-shadow offset-x
+ <label id="dropshadowosxL">0</label>px
+ <input type="range" id="dropshadowosxR" min="-200" max="200" value="0"><br>
+ drop-shadow offset-y
+ <label id="dropshadowosyL">0</label>px
+ <input type="range" id="dropshadowosyR" min="-200" max="200" value="0"><br>
+ drop-shadow blur
+ <label id="dropshadowbL">0</label>px
+ <input type="range" id="dropshadowbR" min="0" max="10" value="0"><br>
+ drop-shadow color
+ <label id="dropshadowcL">#000000</label>
+ <input type="color" id="dropshadowcR"><br>
+ <img id="dropshadowI"></img>
+</div>
+
+<div>grayscale
+ <label id="grayscaleL">100</label>%
+ <input type="range" id="grayscaleR" min="0" max="100" value="0"><br>
+ <img id="grayscaleI"></img>
+</div>
+
+<div>hue-rotate
+ <label id="huerotateL">0</label>deg
+ <input type="range" id="huerotateR" min="0" max="360" value="0"><br>
+ <img id="huerotateI"></img>
+</div>
+
+<div>invert
+ <label id="invertL">0</label>%
+ <input type="range" id="invertR" min="0" max="100" value="0"><br>
+ <img id="invertI"></img>
+</div>
+
+<div>opacity
+ <label id="opacityL">100</label>%
+ <input type="range" id="opacityR" min="0" max="100" value="100"><br>
+ <img id="opacityI"></img>
+</div>
+
+<div>saturate
+ <label id="saturateL">100</label>%
+ <input type="range" id="saturateR" min="0" max="200" value="100"><br>
+ <img id="saturateI"></img>
+</div>
+
+<div>sepia
+ <label id="sepiaL">0</label>%
+ <input type="range" id="sepiaR" min="0" max="100" value="0"><br>
+ <img id="sepiaI"></img>
+</div>
+
+<script>
+ var allimg = document.querySelectorAll("img");
+ allimg.forEach((e) => {
+  e.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddqbkhp-8d10ec0c-f90d-4443-ba21-f2f6808f2428.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHFia2hwLThkMTBlYzBjLWY5MGQtNDQ0My1iYTIxLWYyZjY4MDhmMjQyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.v-eyeU0AW-ROWDECC66nbnKI1PgNRcuWR5C2qYL0E88';
+ });
+
+document.querySelector("#blurR").ontouchmove = function() {
+ let blurR = document.querySelector("#blurR").value;
+ document.querySelector("#blurL").innerHTML = blurR;
+ document.querySelector("#blurI").style.filter = "blur("+blurR+"px)";
+}
+
+document.querySelector("#brightnessR").ontouchmove = function() {
+ let brightnessR = document.querySelector("#brightnessR").value;
+ document.querySelector("#brightnessL").innerHTML = brightnessR; 
+ document.querySelector("#brightnessI").style.filter = "brightness("+brightnessR+"%)";
+}
+
+document.querySelector("#contrastR").ontouchmove = function() {
+ let contrastR = document.querySelector("#contrastR").value;
+ document.querySelector("#contrastL").innerHTML = contrastR; 
+ document.querySelector("#contrastI").style.filter = "contrast("+contrastR+"%)";
+}
+
+document.querySelector("#dropshadowosxR").ontouchmove = funcdropshadow;
+document.querySelector("#dropshadowosyR").ontouchmove = funcdropshadow;
+document.querySelector("#dropshadowbR").ontouchmove = funcdropshadow;
+document.querySelector("#dropshadowcR").onchange = funcdropshadow;
+
+function funcdropshadow() {
+ let dropshadowosxR = document.querySelector("#dropshadowosxR").value;
+ let dropshadowosyR = document.querySelector("#dropshadowosyR").value;
+ let dropshadowbR = document.querySelector("#dropshadowbR").value;
+ let dropshadowcR = document.querySelector("#dropshadowcR").value;
+ document.querySelector("#dropshadowosxL").innerHTML = dropshadowosxR; 
+ document.querySelector("#dropshadowosyL").innerHTML = dropshadowosyR; 
+ document.querySelector("#dropshadowbL").innerHTML = dropshadowbR; 
+ document.querySelector("#dropshadowcL").innerHTML = dropshadowcR; 
+ document.querySelector("#dropshadowI").style.filter = "drop-shadow(" + dropshadowosxR + "px " + dropshadowosyR + "px " + dropshadowbR + "px " + dropshadowcR + ")";
+}
+
+document.querySelector("#grayscaleR").ontouchmove = function() {
+ let grayscaleR = document.querySelector("#grayscaleR").value;
+ document.querySelector("#grayscaleL").innerHTML = grayscaleR; 
+ document.querySelector("#grayscaleI").style.filter = "grayscale("+grayscaleR+"%)";
+}
+
+document.querySelector("#huerotateR").ontouchmove = function() {
+ let huerotateR = document.querySelector("#huerotateR").value;
+ document.querySelector("#huerotateL").innerHTML = huerotateR; 
+ document.querySelector("#huerotateI").style.filter = "hue-rotate("+huerotateR+"deg)";
+}
+
+document.querySelector("#invertR").ontouchmove = function() {
+ let invertR = document.querySelector("#invertR").value;
+ document.querySelector("#invertL").innerHTML = invertR; 
+ document.querySelector("#invertI").style.filter = "invert("+invertR+"%)";
+}
+
+document.querySelector("#opacityR").ontouchmove = function() {
+ let opacityR = document.querySelector("#opacityR").value;
+ document.querySelector("#opacityL").innerHTML = opacityR; 
+ document.querySelector("#opacityI").style.filter = "opacity("+opacityR+"%)";
+}
+
+document.querySelector("#saturateR").ontouchmove = function() {
+ let saturateR = document.querySelector("#saturateR").value;
+ document.querySelector("#saturateL").innerHTML = saturateR; 
+ document.querySelector("#saturateI").style.filter = "saturate("+saturateR+"%)";
+}
+
+document.querySelector("#sepiaR").ontouchmove = function() {
+ let sepiaR = document.querySelector("#sepiaR").value;
+ document.querySelector("#sepiaL").innerHTML = sepiaR; 
+ document.querySelector("#sepiaI").style.filter = "sepia("+sepiaR+"%)";
+}
+</script>
