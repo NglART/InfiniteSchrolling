@@ -20,8 +20,12 @@ p:nth-of-type(5) {
 p:nth-of-type(6) {
  line-height: 2;
 }
+p:nth-of-type(7) {
+ font-family: arial,serif;
+}
 </style>
 
+<p>This is a paragraph.This is a paragraph.</p>
 <p>This is a paragraph.This is a paragraph.</p>
 <p>This is a paragraph.This is a paragraph.</p>
 <p>This is a paragraph.This is a paragraph.</p>
