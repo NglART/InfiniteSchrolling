@@ -1,0 +1,34 @@
+<style>
+img {
+ width: 200px;
+ height: 200px;
+ border: 1px solid black;
+ animation: mymove 5s infinite;
+}
+@keyframes mymove {
+ from { width: 200px; height: 200px; }
+ to { width: 300px; height: 300px; }
+}
+
+img:nth-of-type(1) {
+ object-fit: fill; //default
+}
+img:nth-of-type(2) {
+ object-fit: contain;
+}
+img:nth-of-type(3) {
+ object-fit: cover;
+}
+img:nth-of-type(4) {
+ object-fit: none;
+}
+img:nth-of-type(5) {
+ object-fit: scale-down;
+}
+</style>
+
+<img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4c29dac-c2a1-44b1-8724-8f407fe521b2/dcgednj-2d960731-95ff-406a-a18a-b22dabc85eb0.png/v1/fill/w_800,h_525,strp/hanamaru_youchien___hiiragi_by_razorracks_dcgednj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MjUiLCJwYXRoIjoiXC9mXC9jNGMyOWRhYy1jMmExLTQ0YjEtODcyNC04ZjQwN2ZlNTIxYjJcL2RjZ2VkbmotMmQ5NjA3MzEtOTVmZi00MDZhLWExOGEtYjIyZGFiYzg1ZWIwLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.S0bHmQHFoCELeD8GXkDmAGN0XWv6dzDpfnFvphVivFw'>
+<img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4c29dac-c2a1-44b1-8724-8f407fe521b2/dcgednj-2d960731-95ff-406a-a18a-b22dabc85eb0.png/v1/fill/w_800,h_525,strp/hanamaru_youchien___hiiragi_by_razorracks_dcgednj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MjUiLCJwYXRoIjoiXC9mXC9jNGMyOWRhYy1jMmExLTQ0YjEtODcyNC04ZjQwN2ZlNTIxYjJcL2RjZ2VkbmotMmQ5NjA3MzEtOTVmZi00MDZhLWExOGEtYjIyZGFiYzg1ZWIwLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.S0bHmQHFoCELeD8GXkDmAGN0XWv6dzDpfnFvphVivFw'>
+<img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4c29dac-c2a1-44b1-8724-8f407fe521b2/dcgednj-2d960731-95ff-406a-a18a-b22dabc85eb0.png/v1/fill/w_800,h_525,strp/hanamaru_youchien___hiiragi_by_razorracks_dcgednj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MjUiLCJwYXRoIjoiXC9mXC9jNGMyOWRhYy1jMmExLTQ0YjEtODcyNC04ZjQwN2ZlNTIxYjJcL2RjZ2VkbmotMmQ5NjA3MzEtOTVmZi00MDZhLWExOGEtYjIyZGFiYzg1ZWIwLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.S0bHmQHFoCELeD8GXkDmAGN0XWv6dzDpfnFvphVivFw'>
+<img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4c29dac-c2a1-44b1-8724-8f407fe521b2/dcgednj-2d960731-95ff-406a-a18a-b22dabc85eb0.png/v1/fill/w_800,h_525,strp/hanamaru_youchien___hiiragi_by_razorracks_dcgednj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MjUiLCJwYXRoIjoiXC9mXC9jNGMyOWRhYy1jMmExLTQ0YjEtODcyNC04ZjQwN2ZlNTIxYjJcL2RjZ2VkbmotMmQ5NjA3MzEtOTVmZi00MDZhLWExOGEtYjIyZGFiYzg1ZWIwLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.S0bHmQHFoCELeD8GXkDmAGN0XWv6dzDpfnFvphVivFw'>
+<img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4c29dac-c2a1-44b1-8724-8f407fe521b2/dcgednj-2d960731-95ff-406a-a18a-b22dabc85eb0.png/v1/fill/w_800,h_525,strp/hanamaru_youchien___hiiragi_by_razorracks_dcgednj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MjUiLCJwYXRoIjoiXC9mXC9jNGMyOWRhYy1jMmExLTQ0YjEtODcyNC04ZjQwN2ZlNTIxYjJcL2RjZ2VkbmotMmQ5NjA3MzEtOTVmZi00MDZhLWExOGEtYjIyZGFiYzg1ZWIwLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.S0bHmQHFoCELeD8GXkDmAGN0XWv6dzDpfnFvphVivFw'>
