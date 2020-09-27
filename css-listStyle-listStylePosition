@@ -1,0 +1,19 @@
+<style>
+ul:nth-of-type(1) {
+ list-style-position: outside;
+}
+ul:nth-of-type(2) {
+ list-style-position: inside;
+}
+</style>
+
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
