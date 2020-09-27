@@ -1,0 +1,174 @@
+<style>
+ul {
+ margin: 50px;
+}
+ul:nth-of-type(1) {
+ list-style-type: armenian;
+}
+ul:nth-of-type(2) {
+ list-style-type: circle;
+}
+ul:nth-of-type(3) {
+ list-style-type: cjk-ideographic;
+}
+ul:nth-of-type(4) {
+ list-style-type: decimal;
+}
+ul:nth-of-type(5) {
+ list-style-type: decimal-leading-zero;
+}
+ul:nth-of-type(6) {
+ list-style-type: disc; // default
+}
+ul:nth-of-type(7) {
+ list-style-type: georgian;
+}
+ul:nth-of-type(8) {
+ list-style-type: hebrew;
+}
+ul:nth-of-type(9) {
+ list-style-type: hiragana;
+}
+ul:nth-of-type(10) {
+ list-style-type: hiragana-iroha;
+}
+ul:nth-of-type(11) {
+ list-style-type: katakana;
+}
+ul:nth-of-type(12) {
+ list-style-type: katakana-iroha;
+}
+ul:nth-of-type(13) {
+ list-style-type: lower-alpha;
+}
+ul:nth-of-type(14) {
+ list-style-type: lower-greek;
+}
+ul:nth-of-type(15) {
+ list-style-type: lower-latin;
+}
+ul:nth-of-type(16) {
+ list-style-type: lower-roman;
+}
+ul:nth-of-type(17) {
+ list-style-type: none;
+}
+ul:nth-of-type(18) {
+ list-style-type: square;
+}
+ul:nth-of-type(19) {
+ list-style-type: upper-alpha;
+}
+ul:nth-of-type(20) {
+ list-style-type: upper-latin;
+}
+ul:nth-of-type(21) {
+ list-style-type: upper-roman;
+}
+</style>
+
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
+<ul>
+ <li>Anzu</li>
+ <li>Hiragi</li>
+ <li>Koume</li>
+</ul>
