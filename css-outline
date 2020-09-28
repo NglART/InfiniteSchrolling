@@ -1,6 +1,7 @@
 <style>
 p {
  outline: thick solid black;
+ outline-offset: 5px;
  border: thick solid red;
 }
 </style>
