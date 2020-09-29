@@ -1,0 +1,12 @@
+<style>
+p {
+ text-align: center;
+ animation: mymove 2s infinite;
+}
+@keyframes mymove {
+ 0% {text-shadow: 5px 5px 1px red, -5px -5px 3px red;}
+ 50% {text-shadow: 10px 10px 1px blue, -10px -10px 3px blue;}
+ 100% {text-shadow: 5px 5px 1px red, -5px -5px 3px red;}
+}
+</style>
+<p>This is a paragraph</p>
