@@ -1,0 +1,45 @@
+<style>
+table:nth-of-type(1) {
+ width: 300px;
+ table-layout: auto; //default
+}
+table:nth-of-type(2) {
+ width: 300px;
+ table-layout: fixed;
+}
+</style>
+
+<table border>
+ <tr>
+  <td>bulbasaurrrrrr</td>
+  <td>squirtle</td>
+  <td>charmander</td>
+ </tr>
+ <tr>
+  <td>ibysaur</td>
+  <td>warturtle</td>
+  <td>charmileon</td>
+ </tr>
+ <tr>
+  <td>venusaur</td>
+  <td>blastoise</td>
+  <td>charizard</td>
+ </tr>
+</table>
+<table border>
+ <tr>
+  <td>bulbasaurrrrrr</td>
+  <td>squirtle</td>
+  <td>charmander</td>
+ </tr>
+ <tr>
+  <td>ibysaur</td>
+  <td>warturtle</td>
+  <td>charmileon</td>
+ </tr>
+ <tr>
+  <td>venusaur</td>
+  <td>blastoise</td>
+  <td>charizard</td>
+ </tr>
+</table>
