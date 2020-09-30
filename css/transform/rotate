@@ -1,0 +1,15 @@
+<style>
+div {
+ text-align: center;
+ background-color: black;
+ color: white;
+ width: 5%;
+ margin: auto;
+ animation: mymove 2s infinite;
+}
+@keyframes mymove {
+ 0% {transform: rotate(0deg);}
+ 100% {transform: rotate(3600deg);}
+}
+</style>
+<div>div</div>
