@@ -1,0 +1,57 @@
+<style>
+div {
+ text-align: center;
+ background-color: black;
+ color: white;
+ width: 5%;
+ margin: auto;
+}
+div:nth-of-type(1) {
+ animation: mymove1 5s infinite;
+}
+@keyframes mymove1 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(-1, 0, 0, 1, 0, 0); }
+}
+div:nth-of-type(2) {
+ animation: mymove2 5s infinite;
+}
+@keyframes mymove2 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(1, 1, 0, 1, 0, 0); }
+}
+div:nth-of-type(3) {
+ animation: mymove3 5s infinite;
+}
+@keyframes mymove3 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(1, 0, 1, 1, 0, 0); }
+}
+div:nth-of-type(4) {
+ animation: mymove4 5s infinite;
+}
+@keyframes mymove4 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(1, 0, 0, -1, 0, 0); }
+}
+div:nth-of-type(5) {
+ animation: mymove5 5s infinite;
+}
+@keyframes mymove5 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(1, 0, 0, 1, 10, 10); }
+}
+div:nth-of-type(6) {
+ animation: mymove6 5s infinite;
+}
+@keyframes mymove6 {
+ from { transform: matrix(1, 0, 0, 1, 0, 0); } 
+ to { transform: matrix(-1, 1, 1, 0, 10, 10); }
+}
+</style>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<div>div</div>
