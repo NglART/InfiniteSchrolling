@@ -52,9 +52,7 @@ section {
 }
 
 #example-element:hover, #example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg) 
-
-scale3d(2,1.5,3);
+  transform: rotate3d(1, 1, 1, 30deg) scale3d(2,1.5,3);
 }
 </style>
 
