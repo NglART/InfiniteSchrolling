@@ -1,0 +1,46 @@
+<style>
+#progressbarH {
+ width: 100%;
+ background-color: black;
+ margin-left: 0px;
+}
+#loadedbarH {
+ width: 10px;
+ max-width: 100%;
+ height: 50px;
+ background-color: red;
+}
+#textbarH {
+ position: absolute;
+ width: 100%;
+ text-align: center;
+ color: white;
+ user-select: none;
+}
+img {
+ position: absolute;
+ width: 5%;
+ user-select: none;
+}
+
+</style>
+<div id="progressbarH">
+ <img src="https://i.pinimg.com/originals/ae/23/91/ae2391b9131d17418ea9ed42e63a4503.png">
+ <p id="textbarH">0</p>
+ <div id="loadedbarH">
+ </div>
+</div>
+
+<script>
+ var progressbar = document.querySelector("#progressbarH");
+ var x = false;
+ progressbar.addEventListener("mousemove", myFunction); 
+ function myFunction(e) {
+   var x = document.querySelector("#progressbarH").getBoundingClientRect();
+   var y = Math.trunc((e.clientX-x.left)/x.width*100);
+   var z = document.querySelector("img").getBoundingClientRect();
+   document.querySelector("p").innerHTML = e.clientX + "px/" + x.width + "px "+ y + "%";
+   document.querySelector("#loadedbarH").style.width = e.clientX-x.left + "px";
+   document.querySelector("img").style.left = e.clientX-z.width/2 + "px"; 
+ }
+</script>
