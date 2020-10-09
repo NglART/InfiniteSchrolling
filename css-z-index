@@ -1,0 +1,20 @@
+<style>
+p {
+ font-size: 100px;
+}
+p:nth-of-type(1) {
+ color: red;
+ position: absolute;
+ animation: mymove 2s infinite;
+}
+p:nth-of-type(2) {
+ color: blue;
+}
+@keyframes mymove {
+ from { z-index: -1;}
+ to { z-index: 1;}
+}
+</style>
+
+<p>1</p>
+<p>2</p>
