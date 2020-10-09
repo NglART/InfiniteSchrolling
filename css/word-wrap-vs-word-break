@@ -1,0 +1,21 @@
+<style>
+div {
+ animation: mymove1 20s infinite;
+ border: 1px solid black;
+}
+
+@keyframes mymove1 {
+ from { width: 50px; }
+ to { width: 550px; }
+}
+
+div:nth-of-type(1) {
+ word-wrap: break-word;
+}
+div:nth-of-type(2) {
+ word-break: break-all;
+}
+</style>
+
+<div>supercalifragilisticoespialidoso word wrapbreak <br> one two three four five siiiixtinasupercalifragilisticoespialidoso</div>
+<div>supercalifragilisticoespialidoso word wrapbreak <br> one two three four five siiiixtinasupercalifragilisticoespialidoso</div>
