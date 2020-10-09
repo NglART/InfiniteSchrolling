@@ -1,0 +1,13 @@
+<style>
+div {
+ border: 1px solid black;
+ animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+ from { word-spacing: 1px; }
+ to { word-spacing: 50px; }
+}
+</style>
+
+<div>supercalifragilisticoespialidoso word spacing</div>
