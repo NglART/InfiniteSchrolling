@@ -1,0 +1,13 @@
+<style>
+p {
+ width: 100px;
+ background: black;
+ color: white;
+ transition-delay: 2s;
+}
+p:hover {
+ width: 100%;
+}
+</style>
+
+<p>Text</p>
