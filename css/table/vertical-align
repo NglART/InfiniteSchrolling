@@ -1,0 +1,26 @@
+<style> 
+table {
+  border: 1px solid red;
+  height: 300px;
+  width: 100%;
+}
+td {
+ border: 1px solid green;
+}
+#myTd1 {
+ vertical-align: bottom;
+}
+#myTd2 {
+ vertical-align: middle;
+}
+#myTd3 {
+ vertical-align: top;
+}
+</style>
+</head>
+
+<table>
+ <tr><td id="myTd1">Some example text</td></tr>
+ <tr><td id="myTd2">Some example text</td></tr>
+ <tr><td id="myTd3">Some example text</td></tr>
+</table>
