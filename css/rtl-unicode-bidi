@@ -1,0 +1,12 @@
+<style>
+p:nth-of-type(2) {
+ direction: rtl;
+}
+p:nth-of-type(3) {
+ direction: rtl;
+ unicode-bidi: bidi-override;
+}
+</style>
+<p>Text.</p>
+<p>Text.</p>
+<p>Text.</p>
