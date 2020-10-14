@@ -1,0 +1,11 @@
+<button onclick="myFunction()">Clear console</button>
+
+<script>
+console.assert(true, "this text will not be printed");
+console.assert(false, "this text will be printed");
+console.assert(document.querySelector("p"), "this querySelector will be printed because does not exist any p");
+
+function myFunction() {
+ console.clear();
+}
+</script>
