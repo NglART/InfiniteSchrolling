@@ -1,0 +1,7 @@
+<script>
+console.count();
+console.count();
+for(let i=0 ; i<=5 ; i++) {
+ console.count();
+}
+</script>
