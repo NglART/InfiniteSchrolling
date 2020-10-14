@@ -1,0 +1,10 @@
+<script>
+var car1 = { name : "Audi", model : "A4" }
+var car2 = { name : "Volvo", model : "XC90" }
+var car3 = { name : "Ford", model : "Fusion" }
+
+console.table(["audi", "a4"]);
+console.table(car1);
+console.table([car1,car2]);
+console.table([car1,car2], ["model"]);
+</script>
