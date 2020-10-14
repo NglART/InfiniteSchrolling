@@ -1,0 +1,11 @@
+<input type="button" value="time" onclick="myFunctionTime()">
+<input type="button" value="timeEnd" onclick="myFunctionTimeEnd()">
+
+<script>
+function myFunctionTime() {
+ console.time();
+} 
+function myFunctionTimeEnd() {
+ console.timeEnd();
+}
+</script>
