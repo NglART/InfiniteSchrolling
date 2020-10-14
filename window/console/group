@@ -1,0 +1,16 @@
+<script>
+console.log("log 1");
+console.group();
+console.log("log 2");
+console.log("log 3");
+console.groupEnd();
+console.groupCollapsed();
+console.log("log 4");
+console.log("log 5");
+console.groupEnd();
+console.group("new group");
+console.log("log 6");
+console.log("log 7");
+console.groupEnd();
+console.log("log 8");
+</script>
