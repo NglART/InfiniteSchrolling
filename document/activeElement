@@ -1,0 +1,8 @@
+<input type="text" value="text 1">
+<input type="button" value="button 1">
+<p></p>
+<script>
+ document.body.onclick= function() {
+  document.querySelector("p").innerHTML = document.activeElement.value;
+ }
+</script>
