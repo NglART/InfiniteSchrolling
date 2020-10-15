@@ -1,0 +1,13 @@
+<input type="button" value="trace" onclick="myFunction()">
+
+<script>
+function myFunction() {
+ myFunction2();
+} 
+function myFunction2() {
+ myFunction3();
+}
+function myFunction3() {
+ console.trace();
+}
+</script>
