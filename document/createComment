@@ -1,0 +1,6 @@
+<body><p></p>
+<script>
+ var c = document.createComment("This is a comment");
+ document.body.appendChild(c);
+ document.querySelector("p").innerText = document.body.innerHTML;
+</script></body>
