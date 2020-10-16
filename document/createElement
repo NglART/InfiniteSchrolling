@@ -1,0 +1,5 @@
+<body><script>
+ var c = document.createElement("button");
+ c.innerHTML = "My button";
+ document.body.appendChild(c);
+</script></body></body>
