@@ -1,0 +1,13 @@
+<style>
+ p {
+  color: white;
+  background: black;
+ }
+</style>
+<body><p></p>
+<script>
+ var c = document.createTextNode("TextNode");
+ document.body.appendChild(c);
+ document.querySelector("p").innerText = document.body.innerHTML;
+</script>
+</body>
