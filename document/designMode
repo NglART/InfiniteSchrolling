@@ -1,0 +1,15 @@
+<p>designMode</p>
+<input type="button" value="on">
+<input type="button" value="off">
+<script>
+ document.querySelectorAll("input")[0].onclick = function() {
+  document.designMode = "on";
+  this.style.backgroundColor = "lightgreen";
+  document.querySelectorAll("input")[1].style.backgroundColor = "transparent";
+ }
+ document.querySelectorAll("input")[1].onclick = function() {
+  document.designMode = "off";
+  this.style.backgroundColor = "lightgreen";
+  document.querySelectorAll("input")[0].style.backgroundColor = "transparent";
+ }
+</script>
