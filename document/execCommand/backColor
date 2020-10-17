@@ -1,0 +1,10 @@
+<p>Select and press shift to change background color</p>
+
+<script>
+document.designMode = "on";
+document.body.onkeydown = function(event) {
+  if (event.keyCode == 16) {
+   document.execCommand("backColor", false, "red");
+  }
+}
+</script>
