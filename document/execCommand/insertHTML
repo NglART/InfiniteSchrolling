@@ -1,0 +1,9 @@
+<div>Select and press shift to cut to clipboard</div>
+<script>
+document.designMode = "on";
+document.body.onkeydown = function(event) {
+  if (event.keyCode == 16) {
+   document.execCommand("insertHTML", false, "<input type='button' value='button'>");
+  }
+}
+</script>   
