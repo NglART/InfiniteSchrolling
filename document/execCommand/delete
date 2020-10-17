@@ -1,0 +1,9 @@
+<div>Select and press shift to delete the selected text</div>
+<script>
+document.designMode = "on";
+document.body.onkeydown = function(event) {
+  if (event.keyCode == 16) {
+   document.execCommand("delete");
+  }
+}
+</script> 
