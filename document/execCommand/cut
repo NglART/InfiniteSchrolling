@@ -1,0 +1,11 @@
+<p>Select and press shift to cut to clipboard</p>
+
+<script>
+document.designMode = "on";
+document.body.onkeydown = function(event) {
+  if (event.keyCode == 16) {
+   document.execCommand("cut");
+   document.designMode = "off";
+  }
+}
+</script>
