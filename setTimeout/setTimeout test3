@@ -1,0 +1,8 @@
+<input type="button" value="get new Date() in 2 seconds">
+<p></p>
+<script>
+ var myVar;
+ document.querySelector("input").onclick = function() {
+  myVar = setTimeout( function() { document.querySelector("p").innerHTML = new Date(); }, 2000);
+ }
+</script>
