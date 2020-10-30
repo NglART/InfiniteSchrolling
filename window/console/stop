@@ -1,0 +1,18 @@
+<body>
+<input type="button" value="add date">
+<input type="button" value="stop window">
+<p></p>
+<script>
+ document.querySelectorAll("input")[0]. onclick = function() {
+  if (document.querySelectorAll("input")[1].style.backgroundColor=="green") {
+   window.stop();
+  } else {
+   document.querySelector("p").innerHTML +=  new Date() + "<br>";
+  }
+ }
+ document.querySelectorAll("input")[1]. onclick = function() {
+  window.stop();
+  this.style.backgroundColor = "green";
+ }
+</script>
+</body>
