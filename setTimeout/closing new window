@@ -1,0 +1,9 @@
+<input type="button" value="open window for 3 seconds">
+<p></p>
+<script>
+ var myVar;
+ document.querySelector("input").onclick = function() {
+  var newWindow = window.open("", "myWindow", "width=200, height=300");
+  setTimeout( function() { newWindow.close(); }, 3000);
+ }
+</script>
