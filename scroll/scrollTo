@@ -1,0 +1,17 @@
+<html>
+<head>
+<style>
+body {
+ width: 5000px;
+}
+</style>
+</head>
+<body>
+<input type="button" value="click me to scroll">
+<script>
+ document.querySelector("input").onclick = function() {
+  window.scrollTo(1500,0);
+ }
+</script>
+</body>
+</html>
