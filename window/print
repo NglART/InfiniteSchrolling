@@ -1,0 +1,7 @@
+<input type="button" value="print this page">
+<script>
+ var newWindow;
+ document.querySelector("input").onclick = function() {
+  window.print();
+ }
+</script>
