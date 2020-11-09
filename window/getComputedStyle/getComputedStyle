@@ -1,0 +1,18 @@
+<style>
+ div:nth-of-type(1) {
+  background-color: red;
+  padding: 50px;
+ }
+ #myDiv {
+  border: 5px solid blue;
+ }
+</style>
+<div id="myDiv">click me to see my background color</div>
+<p></p>
+<script>
+ document.querySelectorAll("div")[0].onclick= function() {
+  var cssElem = window.getComputedStyle(this, null);
+  console.log(cssElem);
+  console.log(cssElem.length);
+ }
+</script>
