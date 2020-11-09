@@ -1,0 +1,8 @@
+<input type="text"><button>encode a string in base64</button>
+<p></p>
+<script>
+ document.querySelector("button").onclick = function() {
+  document.querySelector("p").innerHTML = window.btoa(document.querySelector("input").value);
+  document.querySelector("p").innerHTML += "<br>" + window.atob(document.querySelector("p").innerHTML);
+ }
+</script>
