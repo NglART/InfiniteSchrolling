@@ -1,0 +1,27 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<section>
+<div class="padre">
+    <div class="icon heading-section"></div>
+    <div class="title heading-section"></div>
+    <div class="description"></div>
+</div>
+
+<div class="padre">
+    <div class="icon heading-section"></div>
+    <div class="title heading-section"></div>
+    <div class="description"></div>
+</div>
+
+<div class="padre">
+    <div class="icon heading-section"></div>
+    <div class="title heading-section"></div>
+    <div class="description"></div>
+</div>
+</section>
+
+<script>
+$('.padre').each(function(){
+  $('.heading-section', this).wrapAll("<div class='wrapper d-flex' />");
+});
+console.log(document.querySelector("section").innerHTML);
+</script>
