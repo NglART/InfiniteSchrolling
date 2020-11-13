@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+p {
+ position: fixed;
+ left: 100px;
+ background-color: black;
+ color: green;
+ padding: 10px;
+}
+</style>
+</head>
+<body>
+<p></p>
+<script>
+ document.body.onload = function() {
+  for(let i=0 ; i<30 ; i++ ) {
+   document.body.innerHTML +=  "rooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooow " + i + "<br>";
+  }
+  document.querySelector("p").innerHTML = "pageXOffset : " + window.pageXOffset + "  pageYOffset : " + window.pageYOffset;
+ }
+ document.body.onscroll = function() {
+  document.querySelector("p").innerHTML = "pageXOffset : " + window.pageXOffset + "  pageYOffset : " + window.pageYOffset;
+ }
+</script>
+</body>
+</html> 
