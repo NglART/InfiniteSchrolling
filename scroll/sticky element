@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+img {
+ position: absolute;
+ left: 100px;
+ top: 100px;
+}
+.sticky {
+ position: fixed;
+ top: 0px;
+}
+</style>
+</head>
+<body>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525fc4-4441-45c5-835f-1a8420305424/ddpfcyc-18212ea1-8552-4baf-bf29-059746098ac8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNmM1MjVmYzQtNDQ0MS00NWM1LTgzNWYtMWE4NDIwMzA1NDI0XC9kZHBmY3ljLTE4MjEyZWExLTg1NTItNGJhZi1iZjI5LTA1OTc0NjA5OGFjOC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.64_xs1f0-zYhVk54jY4a1fyD42begJ2kbIkd1MPhaBQ"></img>
+<script>
+ document.body.onload = function() {
+  for(let i=0 ; i<30 ; i++ ) {
+   document.body.innerHTML +=  "rooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooow " + i + "<br>";
+  }
+ }
+ var sticky = document.querySelector("img").offsetTop;
+ document.body.onscroll = function() {
+  if (window.pageYOffset >= sticky) {  
+   document.querySelector("img").classList.add("sticky");
+  } else {
+   document.querySelector("img").classList.remove("sticky");
+  } 
+ }
+</script>
+</body>
+</html> 
