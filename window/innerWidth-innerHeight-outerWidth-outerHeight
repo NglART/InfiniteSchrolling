@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p></p>
+<script>
+document.body.onload = function() { 
+ document.querySelector("p").innerHTML += "outerWidth: " + window.outerWidth + " outerHeight: " + window.outerHeight + " innerWidth: " + window.innerWidth + " innerHeight: " + window.innerHeight;
+}
+document.body.onresize = function() { 
+ document.querySelector("p").innerHTML += "outerWidth: " + window.outerWidth + " outerHeight: " + window.outerHeight + " innerWidth: " + window.innerWidth + " innerHeight: " + window.innerHeight;
+}
+</script>
+</body>
+</html>
