@@ -1,8 +1,9 @@
 <p></p>
 <script>
 if (typeof(Storage) !== "undefined") {
- localStorage.setItem("lastname", "Smith");
- document.querySelector("p").innerHTML = localStorage.getItem("lastname");
+ localStorage.setItem("lastname1", "Smith1");
+ localStorage.lastname2 = "Smith2";
+ document.querySelector("p").innerHTML = localStorage.getItem("lastname1") + " " + localStorage.lastname2;
 } else {
  document.querySelector("p").innerHTML = "your browser does not support localStorage";
 }
