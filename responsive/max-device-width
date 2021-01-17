@@ -1,0 +1,8 @@
+<style>
+body {
+ background-color:blue;
+}
+@media screen and (max-device-width: 412px) {
+  body { background-color: green }
+}
+</style>
