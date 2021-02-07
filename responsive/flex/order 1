@@ -1,0 +1,33 @@
+<style>
+.FlexWrapper {
+    background-color: indigo;
+    display: flex;
+    flex-direction: column;
+}
+
+.FlexItems {
+    display: flex;
+    align-items: center;
+    min-height: 6.25rem;
+    padding: 1rem;
+}
+
+.FlexHeader {
+    background-color: #105B63;    
+}
+
+.FlexContent {
+    background-color: #FFFAD5;
+    order: -1;
+}
+
+.FlexFooter {
+    background-color: #BD4932;
+}
+</style>
+
+<div class="FlexWrapper">
+    <div class="FlexItems FlexHeader">Header.</div>
+    <div class="FlexItems FlexContent">Body.</div>
+    <div class="FlexItems FlexFooter">Footer.</div>
+</div>
