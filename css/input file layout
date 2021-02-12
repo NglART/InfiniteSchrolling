@@ -1,0 +1,30 @@
+<style>
+#main {
+ border: 10px solid black;
+ width: 500px;
+ height: 400px;
+ display: flex;
+}
+input {
+ width: 500;
+ height: 400;
+}
+input, #filayout {
+ position: absolute;
+}
+img {
+ object-fit: contain;
+ width: 500px;
+ height: 400px;
+ object-fit: cover;
+}
+#filayout {
+ z-index: 1;
+ pointer-events: none;
+}
+</style>
+<div id="main"><div id="filayout">
+  <img src="https://img.vixdata.io/pd/webp-small/es/sites/default/files/s/smart-meme.jpg">
+ </div>
+ <input type="file" value="file">
+</div>
