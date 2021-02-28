@@ -1,0 +1,65 @@
+<style>
+.container {
+ display: flex;
+ transform-style: preserve-3d;
+ transition: transform 1.5s ease;
+ width: 600px;
+ margin: 200px auto;
+}
+.front, .back, .left, .right {
+ position: absolute;
+ width: 100%;
+ background-color: red;
+}
+
+.front {
+ transform: translateZ(300px);
+}
+.back {
+ transform: translateZ(-300px);
+}
+.left {
+ transform: translateX(300px) rotateY(90deg);
+}
+.right {
+ transform: translateX(-300px) rotateY(270deg);
+}
+
+</style>
+
+<style class="curPosition">
+
+.container {
+ transform: rotate3d(0,0,0,0deg);
+}
+
+</style>
+
+<style id="newPosition">
+
+//.container:hover {
+ //transform: rotate3d(0,1,0,90deg);
+//}
+
+</style>
+
+<section class="container">
+ <div class="face front"> 
+ <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" width="100%">
+ </div>
+ <div class="face back">
+  <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+ </div>
+ <div class="face left"></div>
+ <div class="face right">
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+ </div>
+</section>
+
+<script>
+var position = 0;
+document.querySelector(".container").onclick = function() {
+ position += 90;
+document.querySelector("#newPosition").innerHTML = ".container:hover {transform: rotate3d(0,1,0," + position + "deg);}";
+}
+</script>
