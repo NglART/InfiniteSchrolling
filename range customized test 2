@@ -1,0 +1,37 @@
+<style>
+input {
+ display: flex;
+ margin: auto;
+ width: 90%;
+ appearance: none;
+ height: 10px;
+ border-radius: 5px;
+ background: silver;
+ outline: none;
+ transition: 1s;
+}
+input::-webkit-slider-thumb {
+ appearance: none;
+ width: 23px;
+ height: 24px;
+ background: url("https://www.w3schools.com/howto/contrasticon.png");
+}
+img {
+ display: flex;
+ position: absolute;
+ left: 50%;
+ transition: left 2s;
+}
+</style>
+
+<div id="container">
+<input type="range" min="1" max="1000">
+<img src="https://www.w3schools.com/howto/contrasticon.png">
+</div>
+ 
+<script>
+ document.querySelector("input").onchange = function() {
+ var x = this.value;
+ document.querySelector("img").style = "left:" + x + "px";
+}
+</script>
