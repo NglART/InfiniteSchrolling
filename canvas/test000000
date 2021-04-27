@@ -1,0 +1,43 @@
+
+<canvas id="paper" width="500" height="500">
+ Go get chrome
+</canvas>
+
+<script>
+ window.onload = function() {
+  var TWO_PI = 2*Math.PI;
+  var canvas = document.getElementById('paper'),
+      c = canvas.getContext("2d");
+
+  c.fillStyle = "black";
+  c.fillRect(0, 0, canvas.width, canvas.height);
+
+  c.fillStyle = "red";
+  c.fillRect(20, 20, 50, 50);
+
+  c.strokeStyle = "white";
+  c.lineWidth = 10;
+  c.strokeRect(20, 20, 50, 50);
+
+  c.strokeStyle = "#7e9fc2";
+  c.lineWidth = 5;
+
+  c.beginPath();
+  c.moveTo(100, 100);
+  c.lineTo(150, 200);
+  c.lineTo(200, 200);
+  c.lineTo(200, 250);
+  c.lineTo(100, 250);
+  c.closePath();
+  c.stroke();
+  c.fill();
+  
+  c.fillStyle = "white";
+  c.font = "50px Helvetica";
+  c.fillText("hello", 200, 200);
+  
+  c.beginPath();
+  c.arc(200, 340, 50, 0, TWO_PI, true);
+  c.fill();
+ };
+</script>
