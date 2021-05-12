@@ -1,0 +1,10 @@
+function findNumber(arr, k) {
+    // Write your code here
+    var x = "NO";
+    console.log(arr);
+    console.log(k);
+    if(arr.includes(k)){
+        x="YES";
+    }
+    return x;
+}
