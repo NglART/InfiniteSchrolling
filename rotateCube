@@ -6,26 +6,40 @@ div { height: 500px; width: 500px; position: absolute; opacity: .5; font-size: 1
 .div2 { background-color: red; transform: translateZ(-250px);}
 .div3 { background-color: green; transform: translateX(250px) rotateY(90deg);}
 .div4 { background-color: blue; transform: translateX(-250px) rotateY(270deg);}
+.div5 { background-color: pink; transform: translateY(250px) rotateX(90deg);}
+.div6 { background-color: purple; transform: translateY(-250px) rotateX(270deg);}
 </style>
-<style id="rotateCSS">
- section {transform: rotate3d(0,0,0,0deg);}
-</style>
+<style id="rotateCSS"></style>
+<span></span>
 <section>
  <div class="div1"></div>
  <div class="div2"></div>
  <div class="div3"></div>
  <div class="div4"></div>
+ <div class="div5"></div>
+ <div class="div6"></div>
 </section>
 
 <script>
- posRota = 0;
+ posRotaX = 0;
+ posRotaY = 0;
  posLeft = document.querySelector("section").getBoundingClientRect().left;
+ posTop = document.querySelector("section").getBoundingClientRect().top;
+ posBottom = document.querySelector("section").getBoundingClientRect().bottom;
  document.querySelector("section").onclick = function(e) {
-  if(e.pageX > posLeft + 250) {
-   posRota += 90;
-  } else {
-   posRota -= 90;
-  }
-  ;document.querySelector("#rotateCSS").innerHTML = "section { transform: rotate3d(0,1,0," + posRota + "deg)};";
- };
+  if((e.pageX - posLeft) - (e.pageY - posTop) > 0 && (e.pageX - posLeft) + (e.pageY - posTop) < 500) {
+   document.querySelector("span").innerHTML = "top " + document.querySelector("#rotateCSS").innerHTML ;
+   posRotaX += 90;
+  } else if((e.pageX - posLeft) - (e.pageY - posTop) > 0 && (e.pageX - posLeft) + (e.pageY - posTop) > 500) {
+   document.querySelector("span").innerHTML = "right " + document.querySelector("#rotateCSS").innerHTML ;
+   posRotaY += 90;  
+  } else if((e.pageX - posLeft) - (e.pageY - posTop) < 0 && (e.pageX - posLeft) + (e.pageY - posTop) > 500) {
+   document.querySelector("span").innerHTML = "bottom " + document.querySelector("#rotateCSS").innerHTML ;
+   posRotaX -= 90;    
+  } else if((e.pageX - posLeft) - (e.pageY - posTop) < 0 && (e.pageX - posLeft) + (e.pageY - posTop) > -500) {
+   document.querySelector("span").innerHTML = "left " + document.querySelector("#rotateCSS").innerHTML ;
+   posRotaY -= 90;    
+  };
+  document.querySelector("#rotateCSS").innerHTML = "section { transform: rotateX(" + posRotaX + "deg) rotateY(" + posRotaY + "deg)};";
+ }; 
 </script>
