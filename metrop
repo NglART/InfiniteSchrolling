@@ -1,0 +1,62 @@
+<style>
+.center {
+  text-align: center;
+}
+.btnJiggle:active {
+ -webkit-animation: jello-horizontal 0.5s both;
+ animation: jello-horizontal 0.5s both;
+}
+@-webkit-keyframes jello-horizontal {
+      0% {
+        -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+      }
+      30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+      }
+      40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+      }
+      50% {
+        -webkit-transform: scale3d(10.15, 0.85, 1);
+              transform: scale3d(10.15, 0.85, 1);
+      }
+      65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+      }
+      75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+      }
+      100% {
+        -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+      }        
+}
+</style>
+<div class="center"><input type="button" class="btnJiggle" id="rute" value=">>> NORTE >>> SUR >>>"></div>
+<div class="center"><input type="time" class="btnJiggle" id="timeInput"></div>
+<script>
+//variables
+var x = document.getElementById("rute");
+var t = document.getElementById("timeInput");
+var hours = new Date().getHours();
+var minutes = new Date().getMinutes();
+var hours2 = "";
+var minutes2 = "";
+//set current time
+if(hours<10){hours2="0"+hours}else{hours2=hours}
+if(minutes<10){minutes2 ="0"+minutes}else{minutes2 =minutes}
+t.value= hours2+":"+minutes2;
+x.onclick = function() {
+ if (x.value === ">>> NORTE >>> SUR >>>") {
+  x.value = "<<< NORTE <<< SUR <<<";
+ } 
+ else {
+  x.value = ">>> NORTE >>> SUR >>>";
+ }  
+}
+</script>
